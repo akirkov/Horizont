@@ -296,12 +296,12 @@ function initServersTable() {
             },
             { 
                 "sTitle" : "Сервис заявок",
-                "mData": "Horizont.Claims.Service",
+                "mData": "ClaimsService",
                 "sWidth" : "35%" 
             },
             { 
                 "sTitle" : "Сервис инженерного оборудования",
-                "mData": "Horizont.Elv.Service",
+                "mData": "ElvService",
                 "sWidth" : "35%" 
             },
             {
