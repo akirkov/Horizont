@@ -1,0 +1,8 @@
+D:\Source\Horizont\Horizont.Claims\Horizont.Claims.Model\bin\Debug\Horizont.Claims.Model.dll.config
+D:\Source\Horizont\Horizont.Claims\Horizont.Claims.Model\bin\Debug\Horizont.Claims.Model.dll
+D:\Source\Horizont\Horizont.Claims\Horizont.Claims.Model\bin\Debug\Horizont.Claims.Model.pdb
+D:\Source\Horizont\Horizont.Claims\Horizont.Claims.Model\bin\Debug\Horizont.Claims.Library.dll
+D:\Source\Horizont\Horizont.Claims\Horizont.Claims.Model\bin\Debug\Horizont.Claims.Library.pdb
+D:\Source\Horizont\Horizont.Claims\Horizont.Claims.Model\obj\Debug\Horizont.Claims.Model.csprojResolveAssemblyReference.cache
+D:\Source\Horizont\Horizont.Claims\Horizont.Claims.Model\obj\Debug\Horizont.Claims.Model.dll
+D:\Source\Horizont\Horizont.Claims\Horizont.Claims.Model\obj\Debug\Horizont.Claims.Model.pdb

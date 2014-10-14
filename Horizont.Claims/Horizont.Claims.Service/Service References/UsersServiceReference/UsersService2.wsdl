@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="HorizontSite" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="HorizontSite" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="HorizontSite/Imports">
+      <xsd:import schemaLocation="https://horzt.ru/WebServices/UsersService.svc?xsd=xsd0" namespace="HorizontSite" />
+      <xsd:import schemaLocation="https://horzt.ru/WebServices/UsersService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="https://horzt.ru/WebServices/UsersService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/SystemClientLibrary" />
+      <xsd:import schemaLocation="https://horzt.ru/WebServices/UsersService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="UsersWebService_CreateUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateUser" />
+  </wsdl:message>
+  <wsdl:message name="UsersWebService_CreateUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="UsersWebService_ChangeUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeUser" />
+  </wsdl:message>
+  <wsdl:message name="UsersWebService_ChangeUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="UsersWebService_DeleteUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteUser" />
+  </wsdl:message>
+  <wsdl:message name="UsersWebService_DeleteUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="UsersWebService_AddUserRule_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddUserRule" />
+  </wsdl:message>
+  <wsdl:message name="UsersWebService_AddUserRule_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddUserRuleResponse" />
+  </wsdl:message>
+  <wsdl:message name="UsersWebService_ChangeUserRule_InputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeUserRule" />
+  </wsdl:message>
+  <wsdl:message name="UsersWebService_ChangeUserRule_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeUserRuleResponse" />
+  </wsdl:message>
+  <wsdl:message name="UsersWebService_DeleteUserRule_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteUserRule" />
+  </wsdl:message>
+  <wsdl:message name="UsersWebService_DeleteUserRule_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteUserRuleResponse" />
+  </wsdl:message>
+  <wsdl:message name="UsersWebService_GetUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUser" />
+  </wsdl:message>
+  <wsdl:message name="UsersWebService_GetUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="UsersWebService_GetUsers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsers" />
+  </wsdl:message>
+  <wsdl:message name="UsersWebService_GetUsers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="UsersWebService_GetUserRule_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserRule" />
+  </wsdl:message>
+  <wsdl:message name="UsersWebService_GetUserRule_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserRuleResponse" />
+  </wsdl:message>
+  <wsdl:message name="UsersWebService_GetUserRules_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserRules" />
+  </wsdl:message>
+  <wsdl:message name="UsersWebService_GetUserRules_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserRulesResponse" />
+  </wsdl:message>
+  <wsdl:message name="UsersWebService_GetUserRulesEx_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserRulesEx" />
+  </wsdl:message>
+  <wsdl:message name="UsersWebService_GetUserRulesEx_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserRulesExResponse" />
+  </wsdl:message>
+  <wsdl:message name="UsersWebService_GetCurrentUserRulesEx_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCurrentUserRulesEx" />
+  </wsdl:message>
+  <wsdl:message name="UsersWebService_GetCurrentUserRulesEx_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCurrentUserRulesExResponse" />
+  </wsdl:message>
+  <wsdl:portType name="UsersWebService">
+    <wsdl:operation name="CreateUser">
+      <wsdl:input wsaw:Action="HorizontSite/UsersWebService/CreateUser" message="tns:UsersWebService_CreateUser_InputMessage" />
+      <wsdl:output wsaw:Action="HorizontSite/UsersWebService/CreateUserResponse" message="tns:UsersWebService_CreateUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangeUser">
+      <wsdl:input wsaw:Action="HorizontSite/UsersWebService/ChangeUser" message="tns:UsersWebService_ChangeUser_InputMessage" />
+      <wsdl:output wsaw:Action="HorizontSite/UsersWebService/ChangeUserResponse" message="tns:UsersWebService_ChangeUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUser">
+      <wsdl:input wsaw:Action="HorizontSite/UsersWebService/DeleteUser" message="tns:UsersWebService_DeleteUser_InputMessage" />
+      <wsdl:output wsaw:Action="HorizontSite/UsersWebService/DeleteUserResponse" message="tns:UsersWebService_DeleteUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddUserRule">
+      <wsdl:input wsaw:Action="HorizontSite/UsersWebService/AddUserRule" message="tns:UsersWebService_AddUserRule_InputMessage" />
+      <wsdl:output wsaw:Action="HorizontSite/UsersWebService/AddUserRuleResponse" message="tns:UsersWebService_AddUserRule_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangeUserRule">
+      <wsdl:input wsaw:Action="HorizontSite/UsersWebService/ChangeUserRule" message="tns:UsersWebService_ChangeUserRule_InputMessage" />
+      <wsdl:output wsaw:Action="HorizontSite/UsersWebService/ChangeUserRuleResponse" message="tns:UsersWebService_ChangeUserRule_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUserRule">
+      <wsdl:input wsaw:Action="HorizontSite/UsersWebService/DeleteUserRule" message="tns:UsersWebService_DeleteUserRule_InputMessage" />
+      <wsdl:output wsaw:Action="HorizontSite/UsersWebService/DeleteUserRuleResponse" message="tns:UsersWebService_DeleteUserRule_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUser">
+      <wsdl:input wsaw:Action="HorizontSite/UsersWebService/GetUser" message="tns:UsersWebService_GetUser_InputMessage" />
+      <wsdl:output wsaw:Action="HorizontSite/UsersWebService/GetUserResponse" message="tns:UsersWebService_GetUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUsers">
+      <wsdl:input wsaw:Action="HorizontSite/UsersWebService/GetUsers" message="tns:UsersWebService_GetUsers_InputMessage" />
+      <wsdl:output wsaw:Action="HorizontSite/UsersWebService/GetUsersResponse" message="tns:UsersWebService_GetUsers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserRule">
+      <wsdl:input wsaw:Action="HorizontSite/UsersWebService/GetUserRule" message="tns:UsersWebService_GetUserRule_InputMessage" />
+      <wsdl:output wsaw:Action="HorizontSite/UsersWebService/GetUserRuleResponse" message="tns:UsersWebService_GetUserRule_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserRules">
+      <wsdl:input wsaw:Action="HorizontSite/UsersWebService/GetUserRules" message="tns:UsersWebService_GetUserRules_InputMessage" />
+      <wsdl:output wsaw:Action="HorizontSite/UsersWebService/GetUserRulesResponse" message="tns:UsersWebService_GetUserRules_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserRulesEx">
+      <wsdl:input wsaw:Action="HorizontSite/UsersWebService/GetUserRulesEx" message="tns:UsersWebService_GetUserRulesEx_InputMessage" />
+      <wsdl:output wsaw:Action="HorizontSite/UsersWebService/GetUserRulesExResponse" message="tns:UsersWebService_GetUserRulesEx_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrentUserRulesEx">
+      <wsdl:input wsaw:Action="HorizontSite/UsersWebService/GetCurrentUserRulesEx" message="tns:UsersWebService_GetCurrentUserRulesEx_InputMessage" />
+      <wsdl:output wsaw:Action="HorizontSite/UsersWebService/GetCurrentUserRulesExResponse" message="tns:UsersWebService_GetCurrentUserRulesEx_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

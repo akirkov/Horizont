@@ -1,0 +1,6 @@
+D:\Source\Horizont\Horizont.Model\bin\Release\Horizont.Model.dll.config
+D:\Source\Horizont\Horizont.Model\bin\Release\Horizont.Model.dll
+D:\Source\Horizont\Horizont.Model\bin\Release\Horizont.Model.pdb
+D:\Source\Horizont\Horizont.Model\obj\Release\Horizont.Model.dll
+D:\Source\Horizont\Horizont.Model\obj\Release\Horizont.Model.pdb
+D:\Source\Horizont\Horizont.Model\obj\Release\Horizont.Model.csprojResolveAssemblyReference.cache

@@ -1,0 +1,359 @@
+﻿/* -------------------GENERAL CONTROL------------------- */
+
+.fc-header
+{
+	margin: 10px 10px 15px 0px;
+	width: 100%;
+}
+
+.fc-block-header
+{
+	width: 150px;
+	height: 20px;
+	position:relative;
+	left: 30px;
+	top:-10px;
+	background-color:#F0F0F0;
+	border: 1px solid #a0a0a0;
+}
+
+.fc-block-header p
+{
+	margin-top:0px;
+	font-family:Arial;
+	font-size:10pt;
+	font-weight: bold;
+	text-align:center;
+	width:100%;
+	color:black;
+}
+
+.fc-block
+{
+	margin: 0px 20px 0px 0px;
+	width: 100%;
+	background-color:#E0E0E0;
+	border: 1px solid #a0a0a0;
+	padding-bottom:10px;
+}
+
+.fc-between-blocks
+{
+	height:20px;
+}
+
+.fc-block-row
+{
+	margin-left:50px;
+	margin-bottom: 3px;
+}
+
+.fc-validators
+{
+	font-weight:bold;
+	color:Red;
+}
+
+/* ------------------- COMMON CLAIMS FILTER ------------------- */
+
+#common_claims_filter_regnumber
+{
+	width:120px;
+	margin-left:110px;
+	text-align:center;
+}
+
+#common_claims_filter_date_from_label 
+{
+	margin-left:35px;
+}
+
+#common_claims_filter_date_to_label
+{
+	margin-left:10px;
+}
+
+#common_claims_filter_date_from_checkbox, #common_claims_filter_date_to_checkbox
+{
+	position: relative; 
+	left: 4px;
+	top: 2px;
+	margin-top:2px;
+}
+
+#common_claims_filter_date_from, #common_claims_filter_date_to
+{
+	width:70px;
+	padding: 0px 10px 0px 23px;
+	margin-left:-23px;
+	text-align:right;
+}
+
+#common_claims_filter_journal 
+{
+	width:220px;
+}
+
+#common_claims_filter_address
+{
+	width:200px;
+}
+
+#common_claims_filter_doorway_label
+{
+	margin-left: 32px;
+	font-size:9pt;
+}
+
+#common_claims_filter_flat_label
+{
+	font-size:9pt;
+}
+
+#common_claims_filter_doorway
+{
+	width:30px;
+	padding-right:2px;
+	text-align:center;
+}
+
+#common_claims_filter_flat
+{
+	width:40px;
+	padding-right:2px;
+	text-align:center;
+}
+
+/* ------------------- LIFT CLAIMS FILTER ------------------- */
+
+#lift_claims_filter_regnumber
+{
+	width:120px;
+	margin-left:90px;
+	text-align:center;
+}
+
+#lift_claims_filter_date_from_label
+{
+	margin-left:20px;
+}
+
+#lift_claims_filter_date_to_label
+{
+	margin-left:10px;
+}
+
+#lift_claims_filter_date_from_checkbox, #lift_claims_filter_date_to_checkbox
+{
+	position: relative; 
+	left: 4px;
+	top: 2px;
+	margin-top:2px;
+}
+
+#lift_claims_filter_date_from, #lift_claims_filter_date_to
+{
+	width:70px;
+	padding: 0px 10px 0px 23px;
+	margin-left:-23px;
+	text-align:right;
+}
+
+#lift_claims_filter_address
+{
+	width:200px;
+}
+
+#lift_claims_filter_doorway_label
+{
+	margin-left: 32px;
+	font-size:9pt;
+}
+
+#lift_claims_filter_doorway
+{
+	width:40px;
+	padding-right:2px;
+	text-align:center;
+}
+
+#lift_claims_filter_minstaytime_label
+{
+	margin-left:80px;
+}
+
+#lift_claims_filter_minstaytime
+{
+	width:100px;
+	margin-left:5px;
+	text-align:center;
+}
+
+#lift_claims_filter_minstaytime_dimension
+{
+	margin-left:5px;
+}
+
+/* ------------------- CESSATION CLAIMS FILTER ------------------- */
+
+#cessation_claims_filter_regnumber
+{
+	width:120px;
+	margin-left:70px;
+	text-align:center;
+}
+
+#cessation_claims_filter_date_to_label
+{
+	margin-left:10px;
+}
+
+#cessation_claims_filter_date_from_checkbox, #cessation_claims_filter_date_to_checkbox
+{
+	position: relative; 
+	left: 4px;
+	top: 2px;
+	margin-top:2px;
+}
+
+#cessation_claims_filter_date_from, #cessation_claims_filter_date_to
+{
+	width:70px;
+	padding: 0px 10px 0px 23px;
+	margin-left:-23px;
+	text-align:right;
+}
+
+#cessation_claims_filter_addresses
+{
+	width:270px;
+	margin-right:20px;
+}
+
+#cessation_claims_filter_cessation_object_label
+{
+	margin-left:50px;
+}
+
+#cessation_claims_filter_cessation_object
+{
+	width:170px;
+}
+
+/* ------------------- REPEAT FLATS FILTER ------------------- */
+
+#repeat_flats_filter_date_from_label, #repeat_flats_filter_date_to_label
+{
+	margin-left:10px;
+}
+
+#repeat_flats_filter_date_from_checkbox, #repeat_flats_filter_date_to_checkbox
+{
+	position: relative; 
+	left: 4px;
+	top: 2px;
+	margin-top:2px;
+}
+
+#repeat_flats_filter_date_from, #repeat_flats_filter_date_to
+{
+	width:70px;
+	padding: 0px 10px 0px 23px;
+	margin-left:-23px;
+	text-align:right;
+}
+
+#repeat_flats_filter_journal
+{
+	width:200px;
+}
+
+#repeat_flats_filter_minrepeatscount
+{
+	width:120px;
+	margin-left:70px;
+	text-align:center;
+}
+
+/* ------------------- DATE SPAN FILTER ------------------- */
+
+div.date-span-filter-date-wrap
+{
+	width: 170px;
+}
+
+.date-span-filter-date-wrap label
+{
+	width: 25px;
+	display:inline-block;
+}
+
+.date-span-filter-date-wrap input[type="checkbox"]
+{
+	position: relative; 
+	left: 4px;
+	top: 2px;
+	margin-top:2px;
+}
+
+.date-span-filter-date-wrap input[type="text"]
+{
+	width:70px;
+	padding: 0px 10px 0px 23px;
+	margin-left:-23px;
+	text-align:right;
+}
+
+/* ------------------- ELV OBJECTS FILTER ------------------- */
+
+.elv-objects-filter
+{
+	margin: 5px 5px 5px 40px;
+}
+
+/* ------------------- ELV OBJECTS EVENTS FILTER ------------------- */
+
+#elv_object_events_filter_date_to_label
+{
+	margin-left:10px;
+}
+
+#elv_object_events_filter_date_from_checkbox, #elv_object_events_filter_date_to_checkbox
+{
+	position: relative; 
+	left: 4px;
+	top: 2px;
+	margin-top:2px;
+}
+
+#elv_object_events_filter_date_from, #elv_object_events_filter_date_to
+{
+	width:70px;
+	padding: 0px 10px 0px 23px;
+	margin-left:-23px;
+	text-align:right;
+}
+
+#elv_object_events_filter_mineventtime_label
+{
+	margin-left:50px;
+}
+
+#elv_object_events_filter_mineventtime
+{
+	width:100px;
+	margin-left:5px;
+	text-align:center;
+}
+
+#elv_object_events_filter_mineventtime_dimension
+{
+	margin-left:5px;
+}
+
+#elv_object_events_filter_objects
+{
+	width:270px;
+	margin-right:20px;
+}
+

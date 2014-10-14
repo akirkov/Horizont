@@ -1,0 +1,585 @@
+﻿/* -------------------GENERAL CONTROL------------------- */
+
+.cc-header
+{
+	margin: 10px 20px 5px 0px;
+	width: 100%;
+	height: 40px;
+}
+
+.cc-regnumber-label
+{
+	margin-left:50px;
+}
+
+.cc-regnumber
+{
+	width:130px;
+	text-align:center;
+}
+
+.cc-journal
+{
+	width:470px;
+	font-size:13pt;
+	font-weight: bold !important;
+	text-align: center;
+	color: blue;
+	display: inline-block;
+}
+
+.cc-toolbar
+{
+	float : right;
+	margin-right : 20px;
+	padding-top : 5px;
+}
+
+.cc-block-header
+{
+	width: 250px;
+	height: 25px;
+	position:relative;
+	left: 30px;
+	top:-10px;
+	background-color:#DFFFFF;
+	border: 1px solid #a0a0a0;
+}
+
+.cc-block-header p
+{
+	margin-top:3px;
+	font-family:Arial;
+	font-size:11pt;
+	font-weight: bold;
+	text-align:center;
+	width:100%;
+	color:black;
+}
+
+.cc-block-header input[type="checkbox"]
+{
+	float: right;
+	margin-top:5px;
+	margin-right:5px;
+	display:block;
+}
+
+.cc-block
+{
+	margin: 0px 20px 0px 0px;
+	width: 100%;
+	background-color:#CEE0E1;
+	border: 1px solid #a0a0a0;
+	padding-bottom:10px;
+}
+
+.cc-between-blocks
+{
+	height:20px;
+}
+
+.cc-block-row
+{
+	margin-left:30px;
+	margin-bottom: 3px;
+}
+
+.cc-signature
+{
+	margin-top:10px;
+}
+
+.cc-operator-label
+{
+	width:110px;
+	margin-left:30px;
+	text-align:center;
+	display: inline-block;
+}
+
+.cc-operator
+{
+	width:280px;
+	font-weight:bold;
+	text-align:center;
+	display: inline-block;
+}
+
+.cc-time-label
+{
+	width:50px;
+	margin-left:130px;
+}
+
+.cc-time
+{
+	width:50px;
+	text-align:center;
+	color: #555;
+}
+
+.cc-date-label
+{
+	width:40px;
+	margin-left:20px;
+}
+
+.cc-date
+{
+	width:80px;
+	text-align:center;
+	color: #555;
+}
+
+.cc-validators
+{
+	margin-left:50px;
+	font-weight:bold;
+	color:Red;
+}
+
+/* ------------------- COMMON CLAIM ------------------- */
+
+#common_claim_address_label
+{
+	width:45px;
+	font-weight:bold;
+	display: inline-block;
+}
+
+#common_claim_address
+{
+	width:240px;
+}
+
+#common_claim_flat_label
+{
+	margin-left: 32px;
+	font-size:9pt;
+	color: #555;
+}
+
+#common_claim_doorway_label, #common_claim_floor_label
+{
+	font-size:9pt;
+}
+
+#common_claim_flat, #common_claim_doorway, #common_claim_floor
+{
+	width:40px;
+	padding-right:2px;
+	text-align:center;
+	color: #555;
+}
+
+#common_claim_phone_label, #common_claim_code_label
+{
+	font-size:9pt;
+}
+
+#common_claim_phone
+{
+	width:90px;
+	padding-left:0.3em;
+	padding-right:2px;
+	color: #555;
+}
+
+#common_claim_code
+{
+	width:50px;
+	padding-left:0.3em;
+	padding-right:2px;
+	color: #555;
+}
+
+#common_claim_owner_label
+{
+	width:45px;
+	font-weight:bold;
+	display: inline-block;
+}
+
+#common_claim_owner
+{
+	width:400px;
+    padding-left: 0.3em;
+	padding-right:2px;
+	color: #555;
+}
+
+#common_claim_failure_label
+{
+	width:105px;
+	font-weight:bold;
+	display: inline-block;
+}
+
+#common_claim_failure
+{
+	width:430px;
+	padding-right:2px;
+}
+
+#common_claim_executed_period_label
+{
+	margin-left: 40px;
+	font-size:9pt;
+	text-align:center;
+}
+
+#common_claim_executed_period
+{
+	width:40px;
+	text-align:center;
+	padding-right:2px;
+	display: inline-block;
+	color: #555;
+}
+
+#common_claim_period_dimension
+{
+	font-size:9pt;
+}
+
+#common_claim_comment_label
+{
+	margin-left:110px;
+	width:90px;
+	vertical-align:top;
+	display: inline-block;
+}
+
+#common_claim_comment
+{
+	width:618px;
+	height:35px;
+    padding-left: 0.3em;
+	padding-right:2px;
+    border: 2px inset #EEEEEE;
+	color: #555;
+	resize: none;
+}
+
+#common_claim_orgname_label
+{
+	width:105px;
+	font-weight:bold;
+	display: inline-block;
+}
+
+#common_claim_orgname
+{
+	width:200px;
+}
+
+#common_claim_type_label
+{
+	margin-left:60px;
+}
+
+#common_claim_type
+{
+	width:150px;
+	margin-left:10px;
+    border: 2px inset #EEEEEE;
+}
+
+#common_claim_status_label, #common_claim_typework_label, #common_claim_executor_label
+{
+	width:105px;
+	font-weight:bold;
+	display: inline-block;
+}
+
+#common_claim_status
+{
+	width:220px;
+    border: 2px inset #EEEEEE;
+}
+
+#common_claim_typework
+{
+	width:682px;
+}
+
+#common_claim_executor
+{
+	width:220px;
+}
+
+#common_claim_check
+{
+	margin-left:60px;
+}
+
+/* ------------------- LIFT CLAIM ------------------- */
+
+#lift_claim_address_label
+{
+	width:45px;
+	font-weight:bold;
+	display: inline-block;
+}
+
+#lift_claim_address
+{
+	width:280px;
+}
+
+#lift_claim_doorway_label
+{
+	margin-left: 36px;
+	font-size:9pt;
+}
+
+#lift_claim_doorway
+{
+	width:40px;
+	padding-right:2px;
+	text-align:center;
+	color: #555;
+}
+
+#lift_claim_lift_type_label
+{
+	margin-left: 6px;
+	font-size:9pt;
+}
+
+#lift_claim_lift_type
+{
+	width:180px;
+}
+
+#lift_claim_code_label
+{
+	margin-left: 36px;
+	font-size:9pt;
+}
+
+#lift_claim_code
+{
+	width:50px;
+	padding-left:0.3em;
+	padding-right:2px;
+	color: #555;
+}
+
+#lift_claim_failure_label
+{
+	width:105px;
+	font-weight:bold;
+	display: inline-block;
+}
+
+#lift_claim_failure
+{
+	width:370px;
+	padding-right:2px;
+}
+
+#lift_claim_floor_label
+{
+	margin-left: 40px;
+	font-size:9pt;
+}
+
+#lift_claim_floor
+{
+	width:40px;
+	padding-right:2px;
+	text-align:center;
+	color: #555;
+}
+
+#lift_claim_jam+label, #lift_claim_stay+label
+{
+	font-size:9pt;
+}	
+
+#lift_claim_jam, #lift_claim_stay
+{
+	margin-left:10px;
+}	
+
+#lift_claim_comment_label
+{
+	margin-left:110px;
+	width:90px;
+	vertical-align:top;
+	display: inline-block;
+}
+
+#lift_claim_comment
+{
+	width:609px;
+	height:35px;
+    padding-left: 0.3em;
+	padding-right:2px;
+    border: 2px inset #EEEEEE;
+	color: #555;
+	resize: none;
+}
+
+#lift_claim_orgname_label
+{
+	width:105px;
+	font-weight:bold;
+	display: inline-block;
+}
+
+#lift_claim_orgname
+{
+	width:200px;
+}
+
+#lift_claim_status_label, #lift_claim_reason_label, #lift_claim_typework_label, #lift_claim_executor_label
+{
+	width:105px;
+	font-weight:bold;
+	display: inline-block;
+}
+
+#lift_claim_status
+{
+	width:220px;
+    border: 2px inset #EEEEEE;
+}
+
+#lift_claim_reason
+{
+	width:707px;
+    padding-left: 0.3em;
+	background: white;
+	color: #555;
+}
+
+#lift_claim_typework
+{
+	width:676px;
+}
+
+#lift_claim_executor
+{
+	width:220px;
+}
+
+#lift_claim_check
+{
+	margin-left:60px;
+}	
+
+/* ------------------- CESSATION CLAIM ------------------- */
+
+#cessation_claim_addresses_label, #cessation_claim_cessation_object_label, #cessation_claim_object_type_label, 
+#cessation_claim_basis_label, #cessation_claim_orgname_label, #cessation_claim_comment_label
+{
+	width:90px;
+	font-weight:bold;
+	display: inline-block;
+}
+
+#cessation_claim_addresses
+{
+	width:533px;
+    border: 2px inset #EEEEEE;
+}
+
+#cessation_claim_abonent_label
+{
+	margin-left: 5px;
+	font-size:9pt;
+}
+
+#cessation_claim_abonent
+{
+	width:127px;
+	padding-left:0.3em;
+	padding-right:2px;
+	color: #555;
+}
+
+#cessation_claim_cessation_object
+{
+	width:220px;
+    border: 2px inset #EEEEEE;
+}
+
+#cessation_claim_reason_label
+{
+	margin-left: 20px;
+	font-size:9pt;
+}
+
+#cessation_claim_reason
+{
+	width:362px;
+}
+
+#cessation_claim_object_type
+{
+	width:220px;
+    border: 2px inset #EEEEEE;
+}
+
+#cessation_claim_objects_count_label, #cessation_claim_flats_count_label
+{
+	margin-left: 20px;
+	font-size:9pt;
+	color: #555;
+}
+
+#cessation_claim_objects_count, #cessation_claim_flats_count
+{
+	width:40px;
+	padding-right:2px;
+	text-align:center;
+	color: #555;
+}
+
+#cessation_claim_basis
+{
+	width:250px;
+}
+
+#cessation_claim_basis_comment
+{
+	width:120px;
+	margin-left:35px;
+	color: #555;
+}
+
+#cessation_claim_applicant_label
+{
+	margin-left: 20px;
+	font-size:9pt;
+}
+
+#cessation_claim_applicant
+{
+	width:200px;
+}
+
+#cessation_claim_orgname
+{
+	width:350px;
+}
+
+#cessation_claim_comment_label
+{
+	vertical-align: top;
+	margin-top: 10px;
+}
+
+#cessation_claim_comment
+{
+	width:720px;
+	height:35px;
+    padding-left: 0.3em;
+	padding-right:2px;
+    border: 2px inset #EEEEEE;
+	color: #555;
+	resize: none;
+}

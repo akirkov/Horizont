@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C99B41D3-FFA0-4D60-AF07-B4CFF7339F9D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Horizont.Elv.Library</RootNamespace>
+    <AssemblyName>Horizont.Elv.Library</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Channel.cs">
+      <DependentUpon>ElvModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ChannelEvent.cs">
+      <DependentUpon>ElvModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ChannelState.cs">
+      <DependentUpon>ElvModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Cnt.cs">
+      <DependentUpon>ElvModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Door.cs">
+      <DependentUpon>ElvModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DoorEvent.cs">
+      <DependentUpon>ElvModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DoorState.cs">
+      <DependentUpon>ElvModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\GasSensor.cs" />
+    <Compile Include="Entities\ElvCount.cs" />
+    <Compile Include="Entities\Cnt.cs" />
+    <Compile Include="Entities\Channel.cs" />
+    <Compile Include="Entities\ElvObjectEvents.cs" />
+    <Compile Include="Entities\TeleControl.cs" />
+    <Compile Include="Entities\WaterSensor.cs" />
+    <Compile Include="Entities\FireSensor.cs" />
+    <Compile Include="Entities\Door.cs" />
+    <Compile Include="Entities\Hoist.cs" />
+    <Compile Include="Entities\Lift.cs" />
+    <Compile Include="Entities\Term.cs" />
+    <Compile Include="ElvModel.cs">
+      <DependentUpon>ElvModel.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="FireSensor.cs">
+      <DependentUpon>ElvModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FireSensorEvent.cs">
+      <DependentUpon>ElvModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FireSensorState.cs">
+      <DependentUpon>ElvModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GasSensor.cs">
+      <DependentUpon>ElvModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GasSensorEvent.cs">
+      <DependentUpon>ElvModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GasSensorState.cs">
+      <DependentUpon>ElvModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Hoist.cs">
+      <DependentUpon>ElvModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HoistEvent.cs">
+      <DependentUpon>ElvModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HoistState.cs">
+      <DependentUpon>ElvModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Lift.cs">
+      <DependentUpon>ElvModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LiftEvent.cs">
+      <DependentUpon>ElvModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LiftState.cs">
+      <DependentUpon>ElvModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectSetting.cs">
+      <DependentUpon>ElvModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RecordInfoType.cs">
+      <DependentUpon>ElvModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TeleControl.cs">
+      <DependentUpon>ElvModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TeleControlState.cs">
+      <DependentUpon>ElvModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Term.cs">
+      <DependentUpon>ElvModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TermEvent.cs">
+      <DependentUpon>ElvModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TermState.cs">
+      <DependentUpon>ElvModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WaterSensor.cs">
+      <DependentUpon>ElvModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WaterSensorEvent.cs">
+      <DependentUpon>ElvModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WaterSensorState.cs">
+      <DependentUpon>ElvModel.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>Клиентский профиль .NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Установщик Windows 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ElvModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ElvModel.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

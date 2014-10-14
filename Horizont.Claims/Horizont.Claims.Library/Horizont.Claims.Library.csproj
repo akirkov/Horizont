@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D767D8A2-8BF7-4941-842D-B8193CEE3608}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Horizont.Claims.Library</RootNamespace>
+    <AssemblyName>Horizont.Claims.Library</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Address.cs">
+      <DependentUpon>ClaimsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Address2Journals.cs">
+      <DependentUpon>ClaimsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CessationApplicant.cs">
+      <DependentUpon>ClaimsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CessationBasis.cs">
+      <DependentUpon>ClaimsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CessationClaim.cs">
+      <DependentUpon>ClaimsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CessationClaimHistoryItem.cs">
+      <DependentUpon>ClaimsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CessationReason.cs">
+      <DependentUpon>ClaimsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Change.cs">
+      <DependentUpon>ClaimsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ClaimsModel.cs">
+      <DependentUpon>ClaimsModel.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="CommonClaim.cs">
+      <DependentUpon>ClaimsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CommonClaimHistoryItem.cs">
+      <DependentUpon>ClaimsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CommonFailure.cs">
+      <DependentUpon>ClaimsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBaseSetting.cs">
+      <DependentUpon>ClaimsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DefaultSettingsObject.cs">
+      <DependentUpon>ClaimsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Disp.cs">
+      <DependentUpon>ClaimsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeInfo.cs">
+      <DependentUpon>ClaimsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Address.cs" />
+    <Compile Include="Entities\CessationApplicant.cs" />
+    <Compile Include="Entities\CessationBasis.cs" />
+    <Compile Include="Entities\CessationClaim.cs" />
+    <Compile Include="Entities\CessationReason.cs" />
+    <Compile Include="Entities\ClaimsCount.cs" />
+    <Compile Include="Entities\CommonClaim.cs" />
+    <Compile Include="Entities\CommonFailure.cs" />
+    <Compile Include="Entities\Disp.cs" />
+    <Compile Include="Entities\EmployeeInfo.cs" />
+    <Compile Include="Entities\Executor.cs" />
+    <Compile Include="Entities\FailuresGroup.cs" />
+    <Compile Include="Entities\Flat.cs" />
+    <Compile Include="Entities\Journal.cs" />
+    <Compile Include="Entities\LiftClaim.cs" />
+    <Compile Include="Entities\LiftFailure.cs" />
+    <Compile Include="Entities\Organization.cs" />
+    <Compile Include="Entities\Region.cs" />
+    <Compile Include="Entities\RepeatFlat.cs" />
+    <Compile Include="Entities\TypeWork.cs" />
+    <Compile Include="Executor.cs">
+      <DependentUpon>ClaimsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FailuresGroup.cs">
+      <DependentUpon>ClaimsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Flat.cs">
+      <DependentUpon>ClaimsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Journal.cs">
+      <DependentUpon>ClaimsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LiftClaim.cs">
+      <DependentUpon>ClaimsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LiftClaimHistoryItem.cs">
+      <DependentUpon>ClaimsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LiftFailure.cs">
+      <DependentUpon>ClaimsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Organization.cs">
+      <DependentUpon>ClaimsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RecordInfoType.cs">
+      <DependentUpon>ClaimsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Region.cs">
+      <DependentUpon>ClaimsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TablesChange.cs">
+      <DependentUpon>ClaimsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TypeWork.cs">
+      <DependentUpon>ClaimsModel.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>Клиентский профиль .NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Установщик Windows 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClaimsModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ClaimsModel.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

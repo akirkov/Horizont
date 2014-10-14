@@ -1,0 +1,29 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/MasterPages/DataPage.Master" AutoEventWireup="true" CodeBehind="LiftClaims.master.cs" 
+    Inherits="Horizont.Web.LiftClaimsMasterPage" %>
+<%@ Register src="~/WebControls/LiftClaim.ascx" tagname="LiftClaim" tagprefix="lc" %>
+
+<asp:Content ID="HeadContentId" ContentPlaceHolderID="HeadContent" runat="server">
+    <link href="/Styles/claim-controls.css" rel="stylesheet" type="text/css" />
+
+	<script src="/Scripts/claim-controls.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            initLiftClaimDlg();
+        });
+    </script>
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server"/>
+</asp:Content>
+
+<asp:Content ID="HeaderContentId" ContentPlaceHolderID="HeaderContent" runat="server">
+    <asp:ContentPlaceHolder ID="HeaderContent" runat="server"/>
+</asp:Content>
+
+<asp:Content ID="FilterContentId" ContentPlaceHolderID="FilterContent" runat="server">
+    <asp:ContentPlaceHolder ID="FilterContent" runat="server"/>
+</asp:Content>
+
+<asp:Content ID="ControlContentId" ContentPlaceHolderID="ControlContent" runat="server">
+    <div id="lift_claim_dialog" class="hz-dialog">
+        <lc:LiftClaim id="LiftClaimCtrl" runat="server" />
+    </div>
+</asp:Content>

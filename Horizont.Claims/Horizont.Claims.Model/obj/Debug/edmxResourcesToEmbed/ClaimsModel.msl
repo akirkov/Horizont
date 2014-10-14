@@ -1,0 +1,626 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ClaimsModelStoreContainer" CdmEntityContainer="ClaimsEntities">
+    <EntitySetMapping Name="Addresses">
+      <EntityTypeMapping TypeName="ClaimsModel.Address">
+        <MappingFragment StoreEntitySet="Addresses">
+          <ScalarProperty Name="RegionId" ColumnName="region_id" />
+          <ScalarProperty Name="AddressStr" ColumnName="address" />
+          <ScalarProperty Name="Id" ColumnName="id" />
+          <ScalarProperty Name="Abonent" ColumnName="abonent" />
+          <ScalarProperty Name="HouseId" ColumnName="house_id" />
+          <ComplexProperty Name="RecordInfo">
+            <ScalarProperty Name="IsDeleted" ColumnName="deleted" />
+            <ScalarProperty Name="DeleteOperator" ColumnName="delete_operator" />
+            <ScalarProperty Name="ChangeOperator" ColumnName="change_operator" />
+            <ScalarProperty Name="CreateOperator" ColumnName="create_operator" />
+            <ScalarProperty Name="RecordTime" ColumnName="record_time" />
+            <ScalarProperty Name="DeleteTime" ColumnName="delete_time" />
+            <ScalarProperty Name="ChangeTime" ColumnName="change_time" />
+            <ScalarProperty Name="CreateTime" ColumnName="create_time" />
+          </ComplexProperty>
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CessationApplicants">
+      <EntityTypeMapping TypeName="ClaimsModel.CessationApplicant">
+        <MappingFragment StoreEntitySet="CessationApplicants">
+          <ScalarProperty Name="Id" ColumnName="id" />
+          <ScalarProperty Name="Name" ColumnName="name" />
+          <ComplexProperty Name="RecordInfo">
+            <ScalarProperty Name="IsDeleted" ColumnName="deleted" />
+            <ScalarProperty Name="DeleteOperator" ColumnName="delete_operator" />
+            <ScalarProperty Name="ChangeOperator" ColumnName="change_operator" />
+            <ScalarProperty Name="CreateOperator" ColumnName="create_operator" />
+            <ScalarProperty Name="RecordTime" ColumnName="record_time" />
+            <ScalarProperty Name="DeleteTime" ColumnName="delete_time" />
+            <ScalarProperty Name="ChangeTime" ColumnName="change_time" />
+            <ScalarProperty Name="CreateTime" ColumnName="create_time" />
+          </ComplexProperty>
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CessationBasises">
+      <EntityTypeMapping TypeName="ClaimsModel.CessationBasis">
+        <MappingFragment StoreEntitySet="CessationBasises">
+          <ScalarProperty Name="Id" ColumnName="id" />
+          <ScalarProperty Name="Name" ColumnName="name" />
+          <ComplexProperty Name="RecordInfo">
+            <ScalarProperty Name="IsDeleted" ColumnName="deleted" />
+            <ScalarProperty Name="DeleteOperator" ColumnName="delete_operator" />
+            <ScalarProperty Name="ChangeOperator" ColumnName="change_operator" />
+            <ScalarProperty Name="CreateOperator" ColumnName="create_operator" />
+            <ScalarProperty Name="RecordTime" ColumnName="record_time" />
+            <ScalarProperty Name="DeleteTime" ColumnName="delete_time" />
+            <ScalarProperty Name="ChangeTime" ColumnName="change_time" />
+            <ScalarProperty Name="CreateTime" ColumnName="create_time" />
+          </ComplexProperty>
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CessationClaims">
+      <EntityTypeMapping TypeName="ClaimsModel.CessationClaim">
+        <MappingFragment StoreEntitySet="CessationClaims">
+          <ScalarProperty Name="Id" ColumnName="id" />
+          <ScalarProperty Name="AddressStr" ColumnName="address" />
+          <ScalarProperty Name="Abonent" ColumnName="abonent" />
+          <ScalarProperty Name="CessationObject" ColumnName="cessationobject" />
+          <ScalarProperty Name="Reason" ColumnName="reason" />
+          <ScalarProperty Name="ObjectType" ColumnName="obj" />
+          <ScalarProperty Name="ObjectsCount" ColumnName="objectscount" />
+          <ScalarProperty Name="FlatsCount" ColumnName="flatscount" />
+          <ScalarProperty Name="Applicant" ColumnName="applicant" />
+          <ScalarProperty Name="Basis" ColumnName="basis" />
+          <ScalarProperty Name="BasisComment" ColumnName="basis_comment" />
+          <ScalarProperty Name="OrgName" ColumnName="org_name" />
+          <ScalarProperty Name="Comment" ColumnName="comment" />
+          <ScalarProperty Name="ReceivedOperator" ColumnName="receivedoperator" />
+          <ScalarProperty Name="ReceivedTime" ColumnName="received_time" />
+          <ScalarProperty Name="IsLegate" ColumnName="legate" />
+          <ScalarProperty Name="ExecutedOperator" ColumnName="executedoperator" />
+          <ScalarProperty Name="ExecutedTime" ColumnName="executed_time" />
+          <ScalarProperty Name="DispId" ColumnName="disp_id" />
+          <ScalarProperty Name="RegNumber" ColumnName="reg_number" />
+          <ComplexProperty Name="RecordInfo">
+            <ScalarProperty Name="IsDeleted" ColumnName="deleted" />
+            <ScalarProperty Name="DeleteOperator" ColumnName="delete_operator" />
+            <ScalarProperty Name="ChangeOperator" ColumnName="change_operator" />
+            <ScalarProperty Name="CreateOperator" ColumnName="create_operator" />
+            <ScalarProperty Name="RecordTime" ColumnName="record_time" />
+            <ScalarProperty Name="DeleteTime" ColumnName="delete_time" />
+            <ScalarProperty Name="ChangeTime" ColumnName="change_time" />
+            <ScalarProperty Name="CreateTime" ColumnName="create_time" />
+          </ComplexProperty>
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CessationClaimsHistory">
+      <EntityTypeMapping TypeName="ClaimsModel.CessationClaimHistoryItem">
+        <MappingFragment StoreEntitySet="CessationClaimsHistory">
+          <ScalarProperty Name="Id" ColumnName="id" />
+          <ScalarProperty Name="ClaimId" ColumnName="claim_id" />
+          <ScalarProperty Name="AddressStr" ColumnName="address" />
+          <ScalarProperty Name="Abonent" ColumnName="abonent" />
+          <ScalarProperty Name="CessationObject" ColumnName="cessationobject" />
+          <ScalarProperty Name="Reason" ColumnName="reason" />
+          <ScalarProperty Name="ObjectType" ColumnName="obj" />
+          <ScalarProperty Name="ObjectsCount" ColumnName="objectscount" />
+          <ScalarProperty Name="FlatsCount" ColumnName="flatscount" />
+          <ScalarProperty Name="Applicant" ColumnName="applicant" />
+          <ScalarProperty Name="Basis" ColumnName="basis" />
+          <ScalarProperty Name="BasisComment" ColumnName="basis_comment" />
+          <ScalarProperty Name="OrgName" ColumnName="org_name" />
+          <ScalarProperty Name="Comment" ColumnName="comment" />
+          <ScalarProperty Name="ReceivedOperator" ColumnName="receivedoperator" />
+          <ScalarProperty Name="ReceivedTime" ColumnName="received_time" />
+          <ScalarProperty Name="IsLegate" ColumnName="legate" />
+          <ScalarProperty Name="ExecutedOperator" ColumnName="executedoperator" />
+          <ScalarProperty Name="ExecutedTime" ColumnName="executed_time" />
+          <ScalarProperty Name="DispId" ColumnName="disp_id" />
+          <ScalarProperty Name="RegNumber" ColumnName="reg_number" />
+          <ScalarProperty Name="ChangeTime" ColumnName="change_time" />
+          <ScalarProperty Name="ChangeOperator" ColumnName="change_operator" />
+          <ScalarProperty Name="ChangeId" ColumnName="change_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CessationReasons">
+      <EntityTypeMapping TypeName="ClaimsModel.CessationReason">
+        <MappingFragment StoreEntitySet="CessationReasons">
+          <ScalarProperty Name="Id" ColumnName="id" />
+          <ScalarProperty Name="Name" ColumnName="name" />
+          <ComplexProperty Name="RecordInfo">
+            <ScalarProperty Name="IsDeleted" ColumnName="deleted" />
+            <ScalarProperty Name="DeleteOperator" ColumnName="delete_operator" />
+            <ScalarProperty Name="ChangeOperator" ColumnName="change_operator" />
+            <ScalarProperty Name="CreateOperator" ColumnName="create_operator" />
+            <ScalarProperty Name="RecordTime" ColumnName="record_time" />
+            <ScalarProperty Name="DeleteTime" ColumnName="delete_time" />
+            <ScalarProperty Name="ChangeTime" ColumnName="change_time" />
+            <ScalarProperty Name="CreateTime" ColumnName="create_time" />
+          </ComplexProperty>
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CommonClaims">
+      <EntityTypeMapping TypeName="ClaimsModel.CommonClaim">
+        <MappingFragment StoreEntitySet="Claims">
+          <ScalarProperty Name="DeliveredOperator" ColumnName="deliveredoperator" />
+          <ScalarProperty Name="DeliveredTime" ColumnName="delivered_time" />
+          <ScalarProperty Name="SentTime" ColumnName="sent_time" />
+          <ScalarProperty Name="Status" ColumnName="status" />
+          <ScalarProperty Name="Id" ColumnName="id" />
+          <ScalarProperty Name="JournalId" ColumnName="jrn_id" />
+          <ScalarProperty Name="AddressId" ColumnName="address_id" />
+          <ScalarProperty Name="Flat" ColumnName="flat" />
+          <ScalarProperty Name="Doorway" ColumnName="doorway" />
+          <ScalarProperty Name="Floor" ColumnName="floor" />
+          <ScalarProperty Name="Phone" ColumnName="phone" />
+          <ScalarProperty Name="Code" ColumnName="code" />
+          <ScalarProperty Name="CommonFailureStr" ColumnName="commonfailure" />
+          <ScalarProperty Name="ExecutedPeriod" ColumnName="executedtime" />
+          <ScalarProperty Name="CommonFailureComment" ColumnName="commonfailurecomment" />
+          <ScalarProperty Name="ReceivedOperator" ColumnName="receivedoperator" />
+          <ScalarProperty Name="ReceivedTime" ColumnName="received_time" />
+          <ScalarProperty Name="OrgName" ColumnName="org_name" />
+          <ScalarProperty Name="IsTeam" ColumnName="isteam" />
+          <ScalarProperty Name="IsSubmission" ColumnName="submission" />
+          <ScalarProperty Name="SubmissionTime" ColumnName="submission_time" />
+          <ScalarProperty Name="IsLegate" ColumnName="legate" />
+          <ScalarProperty Name="Result" ColumnName="result" />
+          <ScalarProperty Name="Typework" ColumnName="typework" />
+          <ScalarProperty Name="Executor" ColumnName="executor" />
+          <ScalarProperty Name="IsCheck" ColumnName="executor_check" />
+          <ScalarProperty Name="ExecutedOperator" ColumnName="executedoperator" />
+          <ScalarProperty Name="ExecutedTime" ColumnName="executed_time" />
+          <ScalarProperty Name="DispId" ColumnName="disp_id" />
+          <ScalarProperty Name="RegNumber" ColumnName="reg_number" />
+          <ScalarProperty Name="CommonFailureId" ColumnName="flr_id" />
+          <ScalarProperty Name="SubmissionOperator" ColumnName="submissionoperator" />
+          <ScalarProperty Name="Owner" ColumnName="owner" />
+          <ComplexProperty Name="RecordInfo">
+            <ScalarProperty Name="IsDeleted" ColumnName="deleted" />
+            <ScalarProperty Name="DeleteOperator" ColumnName="delete_operator" />
+            <ScalarProperty Name="ChangeOperator" ColumnName="change_operator" />
+            <ScalarProperty Name="CreateOperator" ColumnName="create_operator" />
+            <ScalarProperty Name="RecordTime" ColumnName="record_time" />
+            <ScalarProperty Name="DeleteTime" ColumnName="delete_time" />
+            <ScalarProperty Name="ChangeTime" ColumnName="change_time" />
+            <ScalarProperty Name="CreateTime" ColumnName="create_time" />
+          </ComplexProperty>
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CommonClaimsHistory">
+      <EntityTypeMapping TypeName="ClaimsModel.CommonClaimHistoryItem">
+        <MappingFragment StoreEntitySet="CommonClaimsHistory">
+          <ScalarProperty Name="Id" ColumnName="id" />
+          <ScalarProperty Name="ClaimId" ColumnName="claim_id" />
+          <ScalarProperty Name="JournalId" ColumnName="jrn_id" />
+          <ScalarProperty Name="AddressId" ColumnName="address_id" />
+          <ScalarProperty Name="Flat" ColumnName="flat" />
+          <ScalarProperty Name="Doorway" ColumnName="doorway" />
+          <ScalarProperty Name="Floor" ColumnName="floor" />
+          <ScalarProperty Name="Phone" ColumnName="phone" />
+          <ScalarProperty Name="Code" ColumnName="code" />
+          <ScalarProperty Name="CommonFailureStr" ColumnName="commonfailure" />
+          <ScalarProperty Name="ExecutedPeriod" ColumnName="executedtime" />
+          <ScalarProperty Name="CommonFailureComment" ColumnName="commonfailurecomment" />
+          <ScalarProperty Name="ReceivedOperator" ColumnName="receivedoperator" />
+          <ScalarProperty Name="ReceivedTime" ColumnName="received_time" />
+          <ScalarProperty Name="OrgName" ColumnName="org_name" />
+          <ScalarProperty Name="IsTeam" ColumnName="isteam" />
+          <ScalarProperty Name="IsSubmission" ColumnName="submission" />
+          <ScalarProperty Name="SubmissionTime" ColumnName="submission_time" />
+          <ScalarProperty Name="IsLegate" ColumnName="legate" />
+          <ScalarProperty Name="Result" ColumnName="result" />
+          <ScalarProperty Name="Typework" ColumnName="typework" />
+          <ScalarProperty Name="Executor" ColumnName="executor" />
+          <ScalarProperty Name="IsCheck" ColumnName="executor_check" />
+          <ScalarProperty Name="ExecutedOperator" ColumnName="executedoperator" />
+          <ScalarProperty Name="ExecutedTime" ColumnName="executed_time" />
+          <ScalarProperty Name="DispId" ColumnName="disp_id" />
+          <ScalarProperty Name="RegNumber" ColumnName="reg_number" />
+          <ScalarProperty Name="CommonFailureId" ColumnName="flr_id" />
+          <ScalarProperty Name="SubmissionOperator" ColumnName="submissionoperator" />
+          <ScalarProperty Name="Owner" ColumnName="owner" />
+          <ScalarProperty Name="ChangeTime" ColumnName="change_time" />
+          <ScalarProperty Name="ChangeOperator" ColumnName="change_operator" />
+          <ScalarProperty Name="ChangeId" ColumnName="change_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CommonFailures">
+      <EntityTypeMapping TypeName="ClaimsModel.CommonFailure">
+        <MappingFragment StoreEntitySet="CommonFailures">
+          <ScalarProperty Name="Id" ColumnName="id" />
+          <ScalarProperty Name="Name" ColumnName="name" />
+          <ScalarProperty Name="ExecutedPeriod" ColumnName="executed_time" />
+          <ScalarProperty Name="JournalId" ColumnName="jrn_id" />
+          <ScalarProperty Name="Spec" ColumnName="spec" />
+          <ComplexProperty Name="RecordInfo">
+            <ScalarProperty Name="IsDeleted" ColumnName="deleted" />
+            <ScalarProperty Name="DeleteOperator" ColumnName="delete_operator" />
+            <ScalarProperty Name="ChangeOperator" ColumnName="change_operator" />
+            <ScalarProperty Name="CreateOperator" ColumnName="create_operator" />
+            <ScalarProperty Name="RecordTime" ColumnName="record_time" />
+            <ScalarProperty Name="DeleteTime" ColumnName="delete_time" />
+            <ScalarProperty Name="ChangeTime" ColumnName="change_time" />
+            <ScalarProperty Name="CreateTime" ColumnName="create_time" />
+          </ComplexProperty>
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DefaultSettingsObjects">
+      <EntityTypeMapping TypeName="ClaimsModel.DefaultSettingsObject">
+        <MappingFragment StoreEntitySet="DefaultSettingsObjects">
+          <ScalarProperty Name="TableName" ColumnName="table_name" />
+          <ScalarProperty Name="ObjectName" ColumnName="object_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Disps">
+      <EntityTypeMapping TypeName="ClaimsModel.Disp">
+        <MappingFragment StoreEntitySet="Disps">
+          <ScalarProperty Name="Phone" ColumnName="phone" />
+          <ScalarProperty Name="Address" ColumnName="address" />
+          <ScalarProperty Name="RegionId" ColumnName="region_id" />
+          <ScalarProperty Name="Id" ColumnName="id" />
+          <ScalarProperty Name="Name" ColumnName="name" />
+          <ScalarProperty Name="DispGuid" ColumnName="disp_guid" />
+          <ComplexProperty Name="RecordInfo">
+            <ScalarProperty Name="IsDeleted" ColumnName="deleted" />
+            <ScalarProperty Name="DeleteOperator" ColumnName="delete_operator" />
+            <ScalarProperty Name="ChangeOperator" ColumnName="change_operator" />
+            <ScalarProperty Name="CreateOperator" ColumnName="create_operator" />
+            <ScalarProperty Name="RecordTime" ColumnName="record_time" />
+            <ScalarProperty Name="DeleteTime" ColumnName="delete_time" />
+            <ScalarProperty Name="ChangeTime" ColumnName="change_time" />
+            <ScalarProperty Name="CreateTime" ColumnName="create_time" />
+          </ComplexProperty>
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Executors">
+      <EntityTypeMapping TypeName="ClaimsModel.Executor">
+        <MappingFragment StoreEntitySet="Executors">
+          <ScalarProperty Name="Id" ColumnName="id" />
+          <ScalarProperty Name="Name" ColumnName="name" />
+          <ScalarProperty Name="Post" ColumnName="post" />
+          <ScalarProperty Name="OrgName" ColumnName="org_name" />
+          <ScalarProperty Name="JournalId" ColumnName="jrn_id" />
+          <ScalarProperty Name="DispId" ColumnName="disp_id" />
+          <ComplexProperty Name="RecordInfo">
+            <ScalarProperty Name="IsDeleted" ColumnName="deleted" />
+            <ScalarProperty Name="DeleteOperator" ColumnName="delete_operator" />
+            <ScalarProperty Name="ChangeOperator" ColumnName="change_operator" />
+            <ScalarProperty Name="CreateOperator" ColumnName="create_operator" />
+            <ScalarProperty Name="RecordTime" ColumnName="record_time" />
+            <ScalarProperty Name="DeleteTime" ColumnName="delete_time" />
+            <ScalarProperty Name="ChangeTime" ColumnName="change_time" />
+            <ScalarProperty Name="CreateTime" ColumnName="create_time" />
+          </ComplexProperty>
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FailuresGroups">
+      <EntityTypeMapping TypeName="ClaimsModel.FailuresGroup">
+        <MappingFragment StoreEntitySet="FailuresGroups">
+          <ScalarProperty Name="Id" ColumnName="id" />
+          <ScalarProperty Name="Name" ColumnName="name" />
+          <ScalarProperty Name="JournalId" ColumnName="jrn_id" />
+          <ComplexProperty Name="RecordInfo">
+            <ScalarProperty Name="IsDeleted" ColumnName="deleted" />
+            <ScalarProperty Name="RecordTime" ColumnName="record_time" />
+            <ScalarProperty Name="DeleteTime" ColumnName="delete_time" />
+            <ScalarProperty Name="ChangeTime" ColumnName="change_time" />
+            <ScalarProperty Name="CreateTime" ColumnName="create_time" />
+            <ScalarProperty Name="DeleteOperator" ColumnName="delete_operator" />
+            <ScalarProperty Name="ChangeOperator" ColumnName="change_operator" />
+            <ScalarProperty Name="CreateOperator" ColumnName="create_operator" />
+          </ComplexProperty>
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Infoes">
+      <EntityTypeMapping TypeName="ClaimsModel.EmployeeInfo">
+        <MappingFragment StoreEntitySet="Info">
+          <ScalarProperty Name="RegionId" ColumnName="region_id" />
+          <ScalarProperty Name="DispId" ColumnName="disp_id" />
+          <ScalarProperty Name="Id" ColumnName="id" />
+          <ScalarProperty Name="Name" ColumnName="name" />
+          <ScalarProperty Name="Post" ColumnName="post" />
+          <ScalarProperty Name="Phone" ColumnName="phone" />
+          <ScalarProperty Name="Address" ColumnName="address" />
+          <ComplexProperty Name="RecordInfo">
+            <ScalarProperty Name="IsDeleted" ColumnName="deleted" />
+            <ScalarProperty Name="DeleteOperator" ColumnName="delete_operator" />
+            <ScalarProperty Name="ChangeOperator" ColumnName="change_operator" />
+            <ScalarProperty Name="CreateOperator" ColumnName="create_operator" />
+            <ScalarProperty Name="RecordTime" ColumnName="record_time" />
+            <ScalarProperty Name="DeleteTime" ColumnName="delete_time" />
+            <ScalarProperty Name="ChangeTime" ColumnName="change_time" />
+            <ScalarProperty Name="CreateTime" ColumnName="create_time" />
+          </ComplexProperty>
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Journals">
+      <EntityTypeMapping TypeName="ClaimsModel.Journal">
+        <MappingFragment StoreEntitySet="Journals">
+          <ScalarProperty Name="Id" ColumnName="id" />
+          <ScalarProperty Name="Name" ColumnName="name" />
+          <ComplexProperty Name="RecordInfo">
+            <ScalarProperty Name="IsDeleted" ColumnName="deleted" />
+            <ScalarProperty Name="DeleteOperator" ColumnName="delete_operator" />
+            <ScalarProperty Name="ChangeOperator" ColumnName="change_operator" />
+            <ScalarProperty Name="CreateOperator" ColumnName="create_operator" />
+            <ScalarProperty Name="RecordTime" ColumnName="record_time" />
+            <ScalarProperty Name="DeleteTime" ColumnName="delete_time" />
+            <ScalarProperty Name="ChangeTime" ColumnName="change_time" />
+            <ScalarProperty Name="CreateTime" ColumnName="create_time" />
+          </ComplexProperty>
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LiftClaims">
+      <EntityTypeMapping TypeName="ClaimsModel.LiftClaim">
+        <MappingFragment StoreEntitySet="LiftClaims">
+          <ScalarProperty Name="Id" ColumnName="id" />
+          <ScalarProperty Name="AddressId" ColumnName="address_id" />
+          <ScalarProperty Name="Doorway" ColumnName="doorway" />
+          <ScalarProperty Name="LiftType" ColumnName="lifttype" />
+          <ScalarProperty Name="Code" ColumnName="code" />
+          <ScalarProperty Name="LiftFailureStr" ColumnName="liftfailure" />
+          <ScalarProperty Name="Floor" ColumnName="floor" />
+          <ScalarProperty Name="IsJam" ColumnName="jam" />
+          <ScalarProperty Name="IsStay" ColumnName="stay" />
+          <ScalarProperty Name="ReceivedOperator" ColumnName="receivedoperator" />
+          <ScalarProperty Name="ReceivedTime" ColumnName="received_time" />
+          <ScalarProperty Name="IsLegate" ColumnName="legate" />
+          <ScalarProperty Name="Result" ColumnName="result" />
+          <ScalarProperty Name="ExecutedTime" ColumnName="executed_time" />
+          <ScalarProperty Name="Reason" ColumnName="reason" />
+          <ScalarProperty Name="Typework" ColumnName="typework" />
+          <ScalarProperty Name="Executor" ColumnName="executor" />
+          <ScalarProperty Name="IsCheck" ColumnName="executor_check" />
+          <ScalarProperty Name="ExecutedOperator" ColumnName="executedoperator" />
+          <ScalarProperty Name="DispId" ColumnName="disp_id" />
+          <ScalarProperty Name="RegNumber" ColumnName="reg_number" />
+          <ScalarProperty Name="IsSubmission" ColumnName="submission" />
+          <ScalarProperty Name="OrgName" ColumnName="org_name" />
+          <ScalarProperty Name="SubmissionOperator" ColumnName="submissionoperator" />
+          <ScalarProperty Name="SubmissionTime" ColumnName="submission_time" />
+          <ScalarProperty Name="OtisId" ColumnName="otis_id" />
+          <ScalarProperty Name="StatusId" ColumnName="status_id" />
+          <ScalarProperty Name="ChangeId" ColumnName="change_id" />
+          <ScalarProperty Name="LiftFailureComment" ColumnName="liftfailurecomment" />
+          <ComplexProperty Name="RecordInfo">
+            <ScalarProperty Name="IsDeleted" ColumnName="deleted" />
+            <ScalarProperty Name="DeleteOperator" ColumnName="delete_operator" />
+            <ScalarProperty Name="ChangeOperator" ColumnName="change_operator" />
+            <ScalarProperty Name="CreateOperator" ColumnName="create_operator" />
+            <ScalarProperty Name="RecordTime" ColumnName="record_time" />
+            <ScalarProperty Name="DeleteTime" ColumnName="delete_time" />
+            <ScalarProperty Name="ChangeTime" ColumnName="change_time" />
+            <ScalarProperty Name="CreateTime" ColumnName="create_time" />
+          </ComplexProperty>
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LiftClaimsHistory">
+      <EntityTypeMapping TypeName="ClaimsModel.LiftClaimHistoryItem">
+        <MappingFragment StoreEntitySet="LiftClaimsHistory">
+          <ScalarProperty Name="Id" ColumnName="id" />
+          <ScalarProperty Name="ClaimId" ColumnName="claim_id" />
+          <ScalarProperty Name="AddressId" ColumnName="address_id" />
+          <ScalarProperty Name="Doorway" ColumnName="doorway" />
+          <ScalarProperty Name="LiftType" ColumnName="lifttype" />
+          <ScalarProperty Name="Code" ColumnName="code" />
+          <ScalarProperty Name="LiftFailureStr" ColumnName="liftfailure" />
+          <ScalarProperty Name="Floor" ColumnName="floor" />
+          <ScalarProperty Name="IsJam" ColumnName="jam" />
+          <ScalarProperty Name="IsStay" ColumnName="stay" />
+          <ScalarProperty Name="ReceivedOperator" ColumnName="receivedoperator" />
+          <ScalarProperty Name="ReceivedTime" ColumnName="received_time" />
+          <ScalarProperty Name="IsLegate" ColumnName="legate" />
+          <ScalarProperty Name="Result" ColumnName="result" />
+          <ScalarProperty Name="ExecutedTime" ColumnName="executed_time" />
+          <ScalarProperty Name="Reason" ColumnName="reason" />
+          <ScalarProperty Name="Typework" ColumnName="typework" />
+          <ScalarProperty Name="Executor" ColumnName="executor" />
+          <ScalarProperty Name="IsCheck" ColumnName="executor_check" />
+          <ScalarProperty Name="ExecutedOperator" ColumnName="executedoperator" />
+          <ScalarProperty Name="DispId" ColumnName="disp_id" />
+          <ScalarProperty Name="RegNumber" ColumnName="reg_number" />
+          <ScalarProperty Name="IsSubmission" ColumnName="submission" />
+          <ScalarProperty Name="OrgName" ColumnName="org_name" />
+          <ScalarProperty Name="SubmissionOperator" ColumnName="submissionoperator" />
+          <ScalarProperty Name="SubmissionTime" ColumnName="submission_time" />
+          <ScalarProperty Name="LiftFailureComment" ColumnName="liftfailurecomment" />
+          <ScalarProperty Name="ChangeTime" ColumnName="change_time" />
+          <ScalarProperty Name="ChangeOperator" ColumnName="change_operator" />
+          <ScalarProperty Name="ChangeId" ColumnName="change_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LiftFailures">
+      <EntityTypeMapping TypeName="ClaimsModel.LiftFailure">
+        <MappingFragment StoreEntitySet="LiftFailures">
+          <ScalarProperty Name="Id" ColumnName="id" />
+          <ScalarProperty Name="Name" ColumnName="name" />
+          <ScalarProperty Name="IsJam" ColumnName="jam" />
+          <ScalarProperty Name="IsStay" ColumnName="stay" />
+          <ComplexProperty Name="RecordInfo">
+            <ScalarProperty Name="IsDeleted" ColumnName="deleted" />
+            <ScalarProperty Name="DeleteOperator" ColumnName="delete_operator" />
+            <ScalarProperty Name="ChangeOperator" ColumnName="change_operator" />
+            <ScalarProperty Name="CreateOperator" ColumnName="create_operator" />
+            <ScalarProperty Name="RecordTime" ColumnName="record_time" />
+            <ScalarProperty Name="DeleteTime" ColumnName="delete_time" />
+            <ScalarProperty Name="ChangeTime" ColumnName="change_time" />
+            <ScalarProperty Name="CreateTime" ColumnName="create_time" />
+          </ComplexProperty>
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Organizations">
+      <EntityTypeMapping TypeName="ClaimsModel.Organization">
+        <MappingFragment StoreEntitySet="Organizations">
+          <ScalarProperty Name="Id" ColumnName="id" />
+          <ScalarProperty Name="Name" ColumnName="name" />
+          <ScalarProperty Name="OrgGuid" ColumnName="org_guid" />
+          <ComplexProperty Name="RecordInfo">
+            <ScalarProperty Name="IsDeleted" ColumnName="deleted" />
+            <ScalarProperty Name="DeleteOperator" ColumnName="delete_operator" />
+            <ScalarProperty Name="ChangeOperator" ColumnName="change_operator" />
+            <ScalarProperty Name="CreateOperator" ColumnName="create_operator" />
+            <ScalarProperty Name="RecordTime" ColumnName="record_time" />
+            <ScalarProperty Name="DeleteTime" ColumnName="delete_time" />
+            <ScalarProperty Name="ChangeTime" ColumnName="change_time" />
+            <ScalarProperty Name="CreateTime" ColumnName="create_time" />
+          </ComplexProperty>
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TypeWorks">
+      <EntityTypeMapping TypeName="ClaimsModel.TypeWork">
+        <MappingFragment StoreEntitySet="TypeWorks">
+          <ScalarProperty Name="Id" ColumnName="id" />
+          <ScalarProperty Name="JournalId" ColumnName="jrn_id" />
+          <ScalarProperty Name="FailureId" ColumnName="flr_id" />
+          <ScalarProperty Name="Name" ColumnName="name" />
+          <ComplexProperty Name="RecordInfo">
+            <ScalarProperty Name="IsDeleted" ColumnName="deleted" />
+            <ScalarProperty Name="DeleteOperator" ColumnName="delete_operator" />
+            <ScalarProperty Name="ChangeOperator" ColumnName="change_operator" />
+            <ScalarProperty Name="CreateOperator" ColumnName="create_operator" />
+            <ScalarProperty Name="RecordTime" ColumnName="record_time" />
+            <ScalarProperty Name="DeleteTime" ColumnName="delete_time" />
+            <ScalarProperty Name="ChangeTime" ColumnName="change_time" />
+            <ScalarProperty Name="CreateTime" ColumnName="create_time" />
+          </ComplexProperty>
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="DispAddress" TypeName="ClaimsModel.DispAddress" StoreEntitySet="Disp2Addresses">
+      <EndProperty Name="Address">
+        <ScalarProperty Name="Id" ColumnName="address_id" />
+      </EndProperty>
+      <EndProperty Name="Disp">
+        <ScalarProperty Name="Id" ColumnName="disp_id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="DispJournal" TypeName="ClaimsModel.DispJournal" StoreEntitySet="Disp2Journals">
+      <EndProperty Name="Journal">
+        <ScalarProperty Name="Id" ColumnName="jrn_id" />
+      </EndProperty>
+      <EndProperty Name="Disp">
+        <ScalarProperty Name="Id" ColumnName="disp_id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FailuresGroupCommonFailure" TypeName="ClaimsModel.FailuresGroupCommonFailure" StoreEntitySet="Group2Failures">
+      <EndProperty Name="CommonFailure">
+        <ScalarProperty Name="Id" ColumnName="flr_id" />
+      </EndProperty>
+      <EndProperty Name="FailuresGroup">
+        <ScalarProperty Name="Id" ColumnName="group_id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <EntitySetMapping Name="Flats">
+      <EntityTypeMapping TypeName="ClaimsModel.Flat">
+        <MappingFragment StoreEntitySet="FlatHousingStock">
+          <ScalarProperty Name="DownFlat" ColumnName="downflat" />
+          <ScalarProperty Name="UpFlat" ColumnName="upflat" />
+          <ScalarProperty Name="Owner" ColumnName="owner" />
+          <ScalarProperty Name="RoomsCount" ColumnName="roomscount" />
+          <ScalarProperty Name="Square" ColumnName="square" />
+          <ScalarProperty Name="OtherPhones" ColumnName="otherphones" />
+          <ScalarProperty Name="Code" ColumnName="code" />
+          <ScalarProperty Name="Phone" ColumnName="phone" />
+          <ScalarProperty Name="Floor" ColumnName="floor" />
+          <ScalarProperty Name="Doorway" ColumnName="doorway" />
+          <ScalarProperty Name="Number" ColumnName="flat" />
+          <ScalarProperty Name="AddressId" ColumnName="address_id" />
+          <ScalarProperty Name="Id" ColumnName="id" />
+          <ComplexProperty Name="RecordInfo">
+            <ScalarProperty Name="IsDeleted" ColumnName="deleted" />
+            <ScalarProperty Name="DeleteOperator" ColumnName="delete_operator" />
+            <ScalarProperty Name="ChangeOperator" ColumnName="change_operator" />
+            <ScalarProperty Name="CreateOperator" ColumnName="create_operator" />
+            <ScalarProperty Name="RecordTime" ColumnName="record_time" />
+            <ScalarProperty Name="DeleteTime" ColumnName="delete_time" />
+            <ScalarProperty Name="ChangeTime" ColumnName="change_time" />
+            <ScalarProperty Name="CreateTime" ColumnName="create_time" />
+          </ComplexProperty>
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="CessationClaimAddress" TypeName="ClaimsModel.CessationClaimAddress" StoreEntitySet="CessationAddresses">
+      <EndProperty Name="Address">
+        <ScalarProperty Name="Id" ColumnName="address_id" />
+      </EndProperty>
+      <EndProperty Name="CessationClaim">
+        <ScalarProperty Name="Id" ColumnName="claim_id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <EntitySetMapping Name="Changes">
+      <EntityTypeMapping TypeName="ClaimsModel.Change">
+        <MappingFragment StoreEntitySet="Changes">
+          <ScalarProperty Name="Id" ColumnName="id" />
+          <ScalarProperty Name="ClaimsId" ColumnName="claim_change_id" />
+          <ScalarProperty Name="SettingsId" ColumnName="settings_change_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TablesChanges">
+      <EntityTypeMapping TypeName="ClaimsModel.TablesChange">
+        <MappingFragment StoreEntitySet="TablesChanges">
+          <ScalarProperty Name="ChangeTime" ColumnName="change_time" />
+          <ScalarProperty Name="TableName" ColumnName="table_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Regions">
+      <EntityTypeMapping TypeName="ClaimsModel.Region">
+        <MappingFragment StoreEntitySet="Regions">
+          <ScalarProperty Name="RegionGuid" ColumnName="region_guid" />
+          <ScalarProperty Name="Chief" ColumnName="chief" />
+          <ScalarProperty Name="Name" ColumnName="name" />
+          <ScalarProperty Name="Id" ColumnName="id" />
+          <ComplexProperty Name="RecordInfo">
+            <ScalarProperty Name="IsDeleted" ColumnName="deleted" />
+            <ScalarProperty Name="RecordTime" ColumnName="record_time" />
+            <ScalarProperty Name="DeleteTime" ColumnName="delete_time" />
+            <ScalarProperty Name="ChangeTime" ColumnName="change_time" />
+            <ScalarProperty Name="CreateTime" ColumnName="create_time" />
+            <ScalarProperty Name="DeleteOperator" ColumnName="delete_operator" />
+            <ScalarProperty Name="ChangeOperator" ColumnName="change_operator" />
+            <ScalarProperty Name="CreateOperator" ColumnName="create_operator" />
+          </ComplexProperty>
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Address2Journals">
+      <EntityTypeMapping TypeName="ClaimsModel.Address2Journals">
+        <MappingFragment StoreEntitySet="Address2Journals">
+          <ScalarProperty Name="IsInclude" ColumnName="isinclude" />
+          <ScalarProperty Name="JournalId" ColumnName="jrn_id" />
+          <ScalarProperty Name="AddressId" ColumnName="address_id" />
+          <ScalarProperty Name="DispId" ColumnName="disp_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DataBaseSettings">
+      <EntityTypeMapping TypeName="ClaimsModel.DataBaseSetting">
+        <MappingFragment StoreEntitySet="DataBaseSettings">
+          <ScalarProperty Name="IsHistoryEnabled" ColumnName="history_enabled" />
+          <ScalarProperty Name="HistoryDaysCount" ColumnName="history_days_count" />
+          <ScalarProperty Name="LastSyncTime" ColumnName="last_sync_time" />
+          <ScalarProperty Name="DeleteAfterDays" ColumnName="delete_after_days_count" />
+          <ScalarProperty Name="IsSync" ColumnName="issync" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

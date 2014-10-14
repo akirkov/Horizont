@@ -1,0 +1,949 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ElvModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="ElvModelStoreContainer">
+    <EntitySet Name="Cnts" EntityType="ElvModel.Store.Cnts" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DoorEvents" EntityType="ElvModel.Store.DoorEvents" store:Type="Tables" store:Schema="dbo" store:Name="DoorEvents">
+      <DefiningQuery>SELECT 
+      [DoorEvents].[opentime] AS [opentime], 
+      [DoorEvents].[door_id] AS [door_id], 
+      [DoorEvents].[isopen] AS [isopen], 
+      [DoorEvents].[create_time] AS [create_time], 
+      [DoorEvents].[record_time] AS [record_time], 
+      [DoorEvents].[create_operator] AS [create_operator]
+      FROM [dbo].[DoorEvents] AS [DoorEvents]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Doors" EntityType="ElvModel.Store.Doors" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DoorsState" EntityType="ElvModel.Store.DoorsState" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="FireSensorEvents" EntityType="ElvModel.Store.FireSensorEvents" store:Type="Tables" store:Schema="dbo" store:Name="FireSensorEvents">
+      <DefiningQuery>SELECT 
+      [FireSensorEvents].[alarmtime] AS [alarmtime], 
+      [FireSensorEvents].[firesensor_id] AS [firesensor_id], 
+      [FireSensorEvents].[isalarm] AS [isalarm], 
+      [FireSensorEvents].[create_time] AS [create_time], 
+      [FireSensorEvents].[record_time] AS [record_time], 
+      [FireSensorEvents].[create_operator] AS [create_operator]
+      FROM [dbo].[FireSensorEvents] AS [FireSensorEvents]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="FireSensors" EntityType="ElvModel.Store.FireSensors" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="FireSensorsState" EntityType="ElvModel.Store.FireSensorsState" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="GasSensorEvents" EntityType="ElvModel.Store.GasSensorEvents" store:Type="Tables" store:Schema="dbo" store:Name="GasSensorEvents">
+      <DefiningQuery>SELECT 
+      [GasSensorEvents].[alarmtime] AS [alarmtime], 
+      [GasSensorEvents].[gassensor_id] AS [gassensor_id], 
+      [GasSensorEvents].[isalarm] AS [isalarm], 
+      [GasSensorEvents].[create_time] AS [create_time], 
+      [GasSensorEvents].[record_time] AS [record_time], 
+      [GasSensorEvents].[create_operator] AS [create_operator]
+      FROM [dbo].[GasSensorEvents] AS [GasSensorEvents]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="GasSensors" EntityType="ElvModel.Store.GasSensors" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="GasSensorsState" EntityType="ElvModel.Store.GasSensorsState" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HoistEvents" EntityType="ElvModel.Store.HoistEvents" store:Type="Tables" store:Schema="dbo" store:Name="HoistEvents">
+      <DefiningQuery>SELECT 
+      [HoistEvents].[breaktime] AS [breaktime], 
+      [HoistEvents].[hoist_id] AS [hoist_id], 
+      [HoistEvents].[isbreak] AS [isbreak], 
+      [HoistEvents].[break_reason] AS [break_reason], 
+      [HoistEvents].[create_time] AS [create_time], 
+      [HoistEvents].[record_time] AS [record_time], 
+      [HoistEvents].[create_operator] AS [create_operator]
+      FROM [dbo].[HoistEvents] AS [HoistEvents]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Hoists" EntityType="ElvModel.Store.Hoists" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HoistsState" EntityType="ElvModel.Store.HoistsState" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ObjectEvents" EntityType="ElvModel.Store.ObjectEvents" store:Type="Tables" store:Schema="dbo" store:Name="ObjectEvents">
+      <DefiningQuery>SELECT 
+      [ObjectEvents].[breaktime] AS [breaktime], 
+      [ObjectEvents].[object_id] AS [object_id], 
+      [ObjectEvents].[isbreak] AS [isbreak], 
+      [ObjectEvents].[break_reason] AS [break_reason], 
+      [ObjectEvents].[create_time] AS [create_time], 
+      [ObjectEvents].[record_time] AS [record_time], 
+      [ObjectEvents].[create_operator] AS [create_operator]
+      FROM [dbo].[ObjectEvents] AS [ObjectEvents]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Objects" EntityType="ElvModel.Store.Objects" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ObjectsState" EntityType="ElvModel.Store.ObjectsState" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Settings" EntityType="ElvModel.Store.Settings" store:Type="Tables" store:Schema="dbo" store:Name="Settings">
+      <DefiningQuery>SELECT 
+      [Settings].[name] AS [name], 
+      [Settings].[val] AS [val], 
+      [Settings].[change_time] AS [change_time], 
+      [Settings].[change_operator] AS [change_operator], 
+      [Settings].[record_time] AS [record_time], 
+      [Settings].[scope_id] AS [scope_id], 
+      [Settings].[region_id] AS [region_id]
+      FROM [dbo].[Settings] AS [Settings]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="SpeakerPhoneChannelEvents" EntityType="ElvModel.Store.SpeakerPhoneChannelEvents" store:Type="Tables" store:Schema="dbo" store:Name="SpeakerPhoneChannelEvents">
+      <DefiningQuery>SELECT 
+      [SpeakerPhoneChannelEvents].[breaktime] AS [breaktime], 
+      [SpeakerPhoneChannelEvents].[channel_id] AS [channel_id], 
+      [SpeakerPhoneChannelEvents].[isbreak] AS [isbreak], 
+      [SpeakerPhoneChannelEvents].[break_reason] AS [break_reason], 
+      [SpeakerPhoneChannelEvents].[create_time] AS [create_time], 
+      [SpeakerPhoneChannelEvents].[record_time] AS [record_time], 
+      [SpeakerPhoneChannelEvents].[create_operator] AS [create_operator]
+      FROM [dbo].[SpeakerPhoneChannelEvents] AS [SpeakerPhoneChannelEvents]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="SpeakerPhoneChannels" EntityType="ElvModel.Store.SpeakerPhoneChannels" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SpeakerPhoneChannelsState" EntityType="ElvModel.Store.SpeakerPhoneChannelsState" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TeleControls" EntityType="ElvModel.Store.TeleControls" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TeleControlsState" EntityType="ElvModel.Store.TeleControlsState" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TermEvents" EntityType="ElvModel.Store.TermEvents" store:Type="Tables" store:Schema="dbo" store:Name="TermEvents">
+      <DefiningQuery>SELECT 
+      [TermEvents].[breaktime] AS [breaktime], 
+      [TermEvents].[term_id] AS [term_id], 
+      [TermEvents].[isbreak] AS [isbreak], 
+      [TermEvents].[create_time] AS [create_time], 
+      [TermEvents].[record_time] AS [record_time], 
+      [TermEvents].[create_operator] AS [create_operator]
+      FROM [dbo].[TermEvents] AS [TermEvents]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Terms" EntityType="ElvModel.Store.Terms" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TermsState" EntityType="ElvModel.Store.TermsState" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="WaterSensorEvents" EntityType="ElvModel.Store.WaterSensorEvents" store:Type="Tables" store:Schema="dbo" store:Name="WaterSensorEvents">
+      <DefiningQuery>SELECT 
+      [WaterSensorEvents].[alarmtime] AS [alarmtime], 
+      [WaterSensorEvents].[watersensor_id] AS [watersensor_id], 
+      [WaterSensorEvents].[isalarm] AS [isalarm], 
+      [WaterSensorEvents].[create_time] AS [create_time], 
+      [WaterSensorEvents].[record_time] AS [record_time], 
+      [WaterSensorEvents].[create_operator] AS [create_operator]
+      FROM [dbo].[WaterSensorEvents] AS [WaterSensorEvents]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="WaterSensors" EntityType="ElvModel.Store.WaterSensors" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="WaterSensorsState" EntityType="ElvModel.Store.WaterSensorsState" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_DoorEvents_Doors" Association="ElvModel.Store.FK_DoorEvents_Doors">
+      <End Role="Doors" EntitySet="Doors" />
+      <End Role="DoorEvents" EntitySet="DoorEvents" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Doors_Terms" Association="ElvModel.Store.FK_Doors_Terms">
+      <End Role="Terms" EntitySet="Terms" />
+      <End Role="Doors" EntitySet="Doors" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DoorsState_Doors" Association="ElvModel.Store.FK_DoorsState_Doors">
+      <End Role="Doors" EntitySet="Doors" />
+      <End Role="DoorsState" EntitySet="DoorsState" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FireSensorEvents_FireSensors" Association="ElvModel.Store.FK_FireSensorEvents_FireSensors">
+      <End Role="FireSensors" EntitySet="FireSensors" />
+      <End Role="FireSensorEvents" EntitySet="FireSensorEvents" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FireSensors_Terms" Association="ElvModel.Store.FK_FireSensors_Terms">
+      <End Role="Terms" EntitySet="Terms" />
+      <End Role="FireSensors" EntitySet="FireSensors" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FireSensorsState_FireSensors" Association="ElvModel.Store.FK_FireSensorsState_FireSensors">
+      <End Role="FireSensors" EntitySet="FireSensors" />
+      <End Role="FireSensorsState" EntitySet="FireSensorsState" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GasSensorEvents_GasSensors" Association="ElvModel.Store.FK_GasSensorEvents_GasSensors">
+      <End Role="GasSensors" EntitySet="GasSensors" />
+      <End Role="GasSensorEvents" EntitySet="GasSensorEvents" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GasSensors_Terms" Association="ElvModel.Store.FK_GasSensors_Terms">
+      <End Role="Terms" EntitySet="Terms" />
+      <End Role="GasSensors" EntitySet="GasSensors" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GasSensorsState_GasSensors" Association="ElvModel.Store.FK_GasSensorsState_GasSensors">
+      <End Role="GasSensors" EntitySet="GasSensors" />
+      <End Role="GasSensorsState" EntitySet="GasSensorsState" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HoistEvents_Hoists" Association="ElvModel.Store.FK_HoistEvents_Hoists">
+      <End Role="Hoists" EntitySet="Hoists" />
+      <End Role="HoistEvents" EntitySet="HoistEvents" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Hoists_Terms" Association="ElvModel.Store.FK_Hoists_Terms">
+      <End Role="Terms" EntitySet="Terms" />
+      <End Role="Hoists" EntitySet="Hoists" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HoistsState_Hoists" Association="ElvModel.Store.FK_HoistsState_Hoists">
+      <End Role="Hoists" EntitySet="Hoists" />
+      <End Role="HoistsState" EntitySet="HoistsState" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ObjectEvents_Objects" Association="ElvModel.Store.FK_ObjectEvents_Objects">
+      <End Role="Objects" EntitySet="Objects" />
+      <End Role="ObjectEvents" EntitySet="ObjectEvents" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Objects_Terms" Association="ElvModel.Store.FK_Objects_Terms">
+      <End Role="Terms" EntitySet="Terms" />
+      <End Role="Objects" EntitySet="Objects" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ObjectsState_Objects" Association="ElvModel.Store.FK_ObjectsState_Objects">
+      <End Role="Objects" EntitySet="Objects" />
+      <End Role="ObjectsState" EntitySet="ObjectsState" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SpeakerPhoneChannelEvents_SpeakerPhoneChannels" Association="ElvModel.Store.FK_SpeakerPhoneChannelEvents_SpeakerPhoneChannels">
+      <End Role="SpeakerPhoneChannels" EntitySet="SpeakerPhoneChannels" />
+      <End Role="SpeakerPhoneChannelEvents" EntitySet="SpeakerPhoneChannelEvents" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SpeakerPhoneChannels_Terms" Association="ElvModel.Store.FK_SpeakerPhoneChannels_Terms">
+      <End Role="Terms" EntitySet="Terms" />
+      <End Role="SpeakerPhoneChannels" EntitySet="SpeakerPhoneChannels" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SpeakerPhoneChannelsState_SpeakerPhoneChannels" Association="ElvModel.Store.FK_SpeakerPhoneChannelsState_SpeakerPhoneChannels">
+      <End Role="SpeakerPhoneChannels" EntitySet="SpeakerPhoneChannels" />
+      <End Role="SpeakerPhoneChannelsState" EntitySet="SpeakerPhoneChannelsState" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TeleControls_Terms" Association="ElvModel.Store.FK_TeleControls_Terms">
+      <End Role="Terms" EntitySet="Terms" />
+      <End Role="TeleControls" EntitySet="TeleControls" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TeleControlsState_TeleControls" Association="ElvModel.Store.FK_TeleControlsState_TeleControls">
+      <End Role="TeleControls" EntitySet="TeleControls" />
+      <End Role="TeleControlsState" EntitySet="TeleControlsState" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TermEvents_Terms" Association="ElvModel.Store.FK_TermEvents_Terms">
+      <End Role="Terms" EntitySet="Terms" />
+      <End Role="TermEvents" EntitySet="TermEvents" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TermsState_Terms" Association="ElvModel.Store.FK_TermsState_Terms">
+      <End Role="Terms" EntitySet="Terms" />
+      <End Role="TermsState" EntitySet="TermsState" />
+    </AssociationSet>
+    <AssociationSet Name="FK_WaterSensorEvents_WaterSensors" Association="ElvModel.Store.FK_WaterSensorEvents_WaterSensors">
+      <End Role="WaterSensors" EntitySet="WaterSensors" />
+      <End Role="WaterSensorEvents" EntitySet="WaterSensorEvents" />
+    </AssociationSet>
+    <AssociationSet Name="FK_WaterSensors_Terms" Association="ElvModel.Store.FK_WaterSensors_Terms">
+      <End Role="Terms" EntitySet="Terms" />
+      <End Role="WaterSensors" EntitySet="WaterSensors" />
+    </AssociationSet>
+    <AssociationSet Name="FK_WaterSensorsState_WaterSensors" Association="ElvModel.Store.FK_WaterSensorsState_WaterSensors">
+      <End Role="WaterSensors" EntitySet="WaterSensors" />
+      <End Role="WaterSensorsState" EntitySet="WaterSensorsState" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Cnts">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="255" />
+    <Property Name="disp_id" Type="int" />
+    <Property Name="region_id" Type="int" />
+    <Property Name="create_time" Type="datetime" />
+    <Property Name="change_time" Type="datetime" />
+    <Property Name="delete_time" Type="datetime" />
+    <Property Name="record_time" Type="datetime" />
+    <Property Name="create_operator" Type="nvarchar" MaxLength="50" />
+    <Property Name="change_operator" Type="nvarchar" MaxLength="50" />
+    <Property Name="delete_operator" Type="nvarchar" MaxLength="50" />
+    <Property Name="deleted" Type="bit" />
+    <Property Name="org_id" Type="int" />
+    <Property Name="idx" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'DnKElv.dbo.DoorEvents' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="DoorEvents">
+    <Key>
+      <PropertyRef Name="isopen" />
+    </Key>
+    <Property Name="opentime" Type="datetime" />
+    <Property Name="door_id" Type="int" />
+    <Property Name="isopen" Type="bit" Nullable="false" />
+    <Property Name="create_time" Type="datetime" />
+    <Property Name="record_time" Type="datetime" />
+    <Property Name="create_operator" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Doors">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="255" />
+    <Property Name="address" Type="nvarchar" MaxLength="255" />
+    <Property Name="idx" Type="int" />
+    <Property Name="term_id" Type="int" />
+    <Property Name="create_time" Type="datetime" />
+    <Property Name="change_time" Type="datetime" />
+    <Property Name="delete_time" Type="datetime" />
+    <Property Name="record_time" Type="datetime" />
+    <Property Name="create_operator" Type="nvarchar" MaxLength="50" />
+    <Property Name="change_operator" Type="nvarchar" MaxLength="50" />
+    <Property Name="delete_operator" Type="nvarchar" MaxLength="50" />
+    <Property Name="deleted" Type="bit" />
+    <Property Name="isoldproto" Type="bit" />
+  </EntityType>
+  <EntityType Name="DoorsState">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="isopen" Type="bit" Nullable="false" />
+    <Property Name="opentime" Type="datetime" />
+    <Property Name="change_time" Type="datetime" />
+    <Property Name="record_time" Type="datetime" />
+    <Property Name="change_operator" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'DnKElv.dbo.FireSensorEvents' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="FireSensorEvents">
+    <Key>
+      <PropertyRef Name="isalarm" />
+    </Key>
+    <Property Name="alarmtime" Type="datetime" />
+    <Property Name="firesensor_id" Type="int" />
+    <Property Name="isalarm" Type="bit" Nullable="false" />
+    <Property Name="create_time" Type="datetime" />
+    <Property Name="record_time" Type="datetime" />
+    <Property Name="create_operator" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="FireSensors">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="255" />
+    <Property Name="address" Type="nvarchar" MaxLength="255" />
+    <Property Name="idx" Type="int" />
+    <Property Name="term_id" Type="int" />
+    <Property Name="create_time" Type="datetime" />
+    <Property Name="change_time" Type="datetime" />
+    <Property Name="delete_time" Type="datetime" />
+    <Property Name="record_time" Type="datetime" />
+    <Property Name="create_operator" Type="nvarchar" MaxLength="50" />
+    <Property Name="change_operator" Type="nvarchar" MaxLength="50" />
+    <Property Name="delete_operator" Type="nvarchar" MaxLength="50" />
+    <Property Name="deleted" Type="bit" />
+  </EntityType>
+  <EntityType Name="FireSensorsState">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="isalarm" Type="bit" Nullable="false" />
+    <Property Name="alarmtime" Type="datetime" />
+    <Property Name="change_time" Type="datetime" />
+    <Property Name="record_time" Type="datetime" />
+    <Property Name="change_operator" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'DnKElv.dbo.GasSensorEvents' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="GasSensorEvents">
+    <Key>
+      <PropertyRef Name="alarmtime" />
+      <PropertyRef Name="gassensor_id" />
+      <PropertyRef Name="isalarm" />
+    </Key>
+    <Property Name="alarmtime" Type="datetime" Nullable="false" />
+    <Property Name="gassensor_id" Type="int" Nullable="false" />
+    <Property Name="isalarm" Type="bit" Nullable="false" />
+    <Property Name="create_time" Type="datetime" />
+    <Property Name="record_time" Type="datetime" />
+    <Property Name="create_operator" Type="char" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="GasSensors">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="255" />
+    <Property Name="address" Type="nvarchar" MaxLength="255" />
+    <Property Name="idx" Type="int" Nullable="false" />
+    <Property Name="term_id" Type="int" Nullable="false" />
+    <Property Name="create_time" Type="datetime" />
+    <Property Name="change_time" Type="datetime" />
+    <Property Name="delete_time" Type="datetime" />
+    <Property Name="record_time" Type="datetime" />
+    <Property Name="create_operator" Type="nvarchar" MaxLength="50" />
+    <Property Name="change_operator" Type="nvarchar" MaxLength="50" />
+    <Property Name="delete_operator" Type="nvarchar" MaxLength="50" />
+    <Property Name="deleted" Type="bit" />
+  </EntityType>
+  <EntityType Name="GasSensorsState">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="isalarm" Type="bit" Nullable="false" />
+    <Property Name="alarmtime" Type="datetime" Nullable="false" />
+    <Property Name="change_time" Type="datetime" />
+    <Property Name="record_time" Type="datetime" />
+    <Property Name="change_operator" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'DnKElv.dbo.HoistEvents' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="HoistEvents">
+    <Key>
+      <PropertyRef Name="hoist_id" />
+      <PropertyRef Name="isbreak" />
+    </Key>
+    <Property Name="breaktime" Type="datetime" />
+    <Property Name="hoist_id" Type="int" Nullable="false" />
+    <Property Name="isbreak" Type="bit" Nullable="false" />
+    <Property Name="break_reason" Type="nvarchar" MaxLength="255" />
+    <Property Name="create_time" Type="datetime" />
+    <Property Name="record_time" Type="datetime" />
+    <Property Name="create_operator" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Hoists">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="255" />
+    <Property Name="address" Type="nvarchar" MaxLength="255" />
+    <Property Name="term_id" Type="int" />
+    <Property Name="create_time" Type="datetime" />
+    <Property Name="change_time" Type="datetime" />
+    <Property Name="delete_time" Type="datetime" />
+    <Property Name="create_operator" Type="nvarchar" MaxLength="50" />
+    <Property Name="change_operator" Type="nvarchar" MaxLength="50" />
+    <Property Name="delete_operator" Type="nvarchar" MaxLength="50" />
+    <Property Name="record_time" Type="datetime" />
+    <Property Name="deleted" Type="bit" />
+    <Property Name="idx" Type="int" />
+  </EntityType>
+  <EntityType Name="HoistsState">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="isbreak" Type="bit" />
+    <Property Name="breaktime" Type="datetime" />
+    <Property Name="isrevision" Type="bit" />
+    <Property Name="revisiontime" Type="datetime" />
+    <Property Name="change_time" Type="datetime" />
+    <Property Name="record_time" Type="datetime" />
+    <Property Name="change_operator" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'DnKElv.dbo.ObjectEvents' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="ObjectEvents">
+    <Key>
+      <PropertyRef Name="object_id" />
+      <PropertyRef Name="isbreak" />
+    </Key>
+    <Property Name="breaktime" Type="datetime" />
+    <Property Name="object_id" Type="int" Nullable="false" />
+    <Property Name="isbreak" Type="bit" Nullable="false" />
+    <Property Name="break_reason" Type="nvarchar" MaxLength="255" />
+    <Property Name="create_time" Type="datetime" />
+    <Property Name="record_time" Type="datetime" />
+    <Property Name="create_operator" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Objects">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="255" />
+    <Property Name="address" Type="nvarchar" MaxLength="255" />
+    <Property Name="term_id" Type="int" />
+    <Property Name="create_time" Type="datetime" />
+    <Property Name="change_time" Type="datetime" />
+    <Property Name="delete_time" Type="datetime" />
+    <Property Name="record_time" Type="datetime" />
+    <Property Name="create_operator" Type="nvarchar" MaxLength="50" />
+    <Property Name="change_operator" Type="nvarchar" MaxLength="50" />
+    <Property Name="delete_operator" Type="nvarchar" MaxLength="50" />
+    <Property Name="deleted" Type="bit" />
+    <Property Name="idx" Type="int" />
+  </EntityType>
+  <EntityType Name="ObjectsState">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="isbreak" Type="bit" Nullable="false" />
+    <Property Name="breaktime" Type="datetime" />
+    <Property Name="isrevision" Type="bit" Nullable="false" />
+    <Property Name="revisiontime" Type="datetime" />
+    <Property Name="change_time" Type="datetime" />
+    <Property Name="record_time" Type="datetime" />
+    <Property Name="change_operator" Type="nvarchar" MaxLength="50" />
+    <Property Name="claim_id" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'DnKElv.dbo.Settings' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="Settings">
+    <Key>
+      <PropertyRef Name="name" />
+      <PropertyRef Name="val" />
+    </Key>
+    <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="val" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="change_time" Type="datetime" />
+    <Property Name="change_operator" Type="nvarchar" MaxLength="50" />
+    <Property Name="record_time" Type="datetime" />
+    <Property Name="scope_id" Type="int" />
+    <Property Name="region_id" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'DnKElv.dbo.SpeakerPhoneChannelEvents' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="SpeakerPhoneChannelEvents">
+    <Key>
+      <PropertyRef Name="isbreak" />
+    </Key>
+    <Property Name="breaktime" Type="datetime" />
+    <Property Name="channel_id" Type="int" />
+    <Property Name="isbreak" Type="bit" Nullable="false" />
+    <Property Name="break_reason" Type="nvarchar" MaxLength="200" />
+    <Property Name="create_time" Type="datetime" />
+    <Property Name="record_time" Type="datetime" />
+    <Property Name="create_operator" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="SpeakerPhoneChannels">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="255" />
+    <Property Name="address" Type="nvarchar" MaxLength="255" />
+    <Property Name="idx" Type="int" />
+    <Property Name="term_id" Type="int" />
+    <Property Name="create_time" Type="datetime" />
+    <Property Name="change_time" Type="datetime" />
+    <Property Name="delete_time" Type="datetime" />
+    <Property Name="record_time" Type="datetime" />
+    <Property Name="create_operator" Type="nvarchar" MaxLength="50" />
+    <Property Name="change_operator" Type="nvarchar" MaxLength="50" />
+    <Property Name="delete_operator" Type="nvarchar" MaxLength="50" />
+    <Property Name="deleted" Type="bit" />
+    <Property Name="normal_level" Type="int" />
+  </EntityType>
+  <EntityType Name="SpeakerPhoneChannelsState">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="iscall" Type="bit" />
+    <Property Name="calltime" Type="datetime" />
+    <Property Name="isblock" Type="bit" />
+    <Property Name="blocktime" Type="datetime" />
+    <Property Name="erroron" Type="bit" />
+    <Property Name="erroroff" Type="bit" />
+    <Property Name="signallevel" Type="int" />
+    <Property Name="noresponce" Type="bit" />
+    <Property Name="checktime" Type="datetime" />
+    <Property Name="change_time" Type="datetime" />
+    <Property Name="record_time" Type="datetime" />
+    <Property Name="change_operator" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TeleControls">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="255" />
+    <Property Name="address" Type="nvarchar" MaxLength="255" />
+    <Property Name="idx" Type="int" />
+    <Property Name="term_id" Type="int" />
+    <Property Name="create_time" Type="datetime" />
+    <Property Name="change_time" Type="datetime" />
+    <Property Name="delete_time" Type="datetime" />
+    <Property Name="record_time" Type="datetime" />
+    <Property Name="create_operator" Type="nvarchar" MaxLength="50" />
+    <Property Name="change_operator" Type="nvarchar" MaxLength="50" />
+    <Property Name="delete_operator" Type="nvarchar" MaxLength="50" />
+    <Property Name="deleted" Type="bit" />
+  </EntityType>
+  <EntityType Name="TeleControlsState">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="isenable" Type="bit" Nullable="false" />
+    <Property Name="cs_state" Type="bit" Nullable="false" />
+    <Property Name="enabletime" Type="datetime" />
+    <Property Name="change_time" Type="datetime" />
+    <Property Name="record_time" Type="datetime" />
+    <Property Name="change_operator" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'DnKElv.dbo.TermEvents' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="TermEvents">
+    <Key>
+      <PropertyRef Name="isbreak" />
+    </Key>
+    <Property Name="breaktime" Type="datetime" />
+    <Property Name="term_id" Type="int" />
+    <Property Name="isbreak" Type="bit" Nullable="false" />
+    <Property Name="create_time" Type="datetime" />
+    <Property Name="record_time" Type="datetime" />
+    <Property Name="create_operator" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Terms">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="255" />
+    <Property Name="address" Type="nvarchar" MaxLength="255" />
+    <Property Name="idx" Type="int" />
+    <Property Name="trans_idx" Type="int" />
+    <Property Name="cnt_id" Type="int" />
+    <Property Name="create_time" Type="datetime" />
+    <Property Name="change_time" Type="datetime" />
+    <Property Name="delete_time" Type="datetime" />
+    <Property Name="record_time" Type="datetime" />
+    <Property Name="create_operator" Type="nvarchar" MaxLength="50" />
+    <Property Name="change_operator" Type="nvarchar" MaxLength="50" />
+    <Property Name="delete_operator" Type="nvarchar" MaxLength="50" />
+    <Property Name="deleted" Type="bit" />
+  </EntityType>
+  <EntityType Name="TermsState">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="isbreak" Type="bit" Nullable="false" />
+    <Property Name="breaktime" Type="datetime" />
+    <Property Name="change_time" Type="datetime" />
+    <Property Name="record_time" Type="datetime" />
+    <Property Name="change_operator" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'DnKElv.dbo.WaterSensorEvents' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="WaterSensorEvents">
+    <Key>
+      <PropertyRef Name="isalarm" />
+    </Key>
+    <Property Name="alarmtime" Type="datetime" />
+    <Property Name="watersensor_id" Type="int" />
+    <Property Name="isalarm" Type="bit" Nullable="false" />
+    <Property Name="create_time" Type="datetime" />
+    <Property Name="record_time" Type="datetime" />
+    <Property Name="create_operator" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="WaterSensors">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="255" />
+    <Property Name="address" Type="nvarchar" MaxLength="255" />
+    <Property Name="idx" Type="int" />
+    <Property Name="term_id" Type="int" />
+    <Property Name="create_time" Type="datetime" />
+    <Property Name="change_time" Type="datetime" />
+    <Property Name="delete_time" Type="datetime" />
+    <Property Name="record_time" Type="datetime" />
+    <Property Name="create_operator" Type="nvarchar" MaxLength="50" />
+    <Property Name="change_operator" Type="nvarchar" MaxLength="50" />
+    <Property Name="delete_operator" Type="nvarchar" MaxLength="50" />
+    <Property Name="deleted" Type="bit" />
+  </EntityType>
+  <EntityType Name="WaterSensorsState">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="isalarm" Type="bit" Nullable="false" />
+    <Property Name="alarmtime" Type="datetime" />
+    <Property Name="change_time" Type="datetime" />
+    <Property Name="record_time" Type="datetime" />
+    <Property Name="change_operator" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <Association Name="FK_DoorEvents_Doors">
+    <End Role="Doors" Type="ElvModel.Store.Doors" Multiplicity="0..1" />
+    <End Role="DoorEvents" Type="ElvModel.Store.DoorEvents" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Doors">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="DoorEvents">
+        <PropertyRef Name="door_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Doors_Terms">
+    <End Role="Terms" Type="ElvModel.Store.Terms" Multiplicity="0..1" />
+    <End Role="Doors" Type="ElvModel.Store.Doors" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Terms">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Doors">
+        <PropertyRef Name="term_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DoorsState_Doors">
+    <End Role="Doors" Type="ElvModel.Store.Doors" Multiplicity="1" />
+    <End Role="DoorsState" Type="ElvModel.Store.DoorsState" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Doors">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="DoorsState">
+        <PropertyRef Name="id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FireSensorEvents_FireSensors">
+    <End Role="FireSensors" Type="ElvModel.Store.FireSensors" Multiplicity="0..1" />
+    <End Role="FireSensorEvents" Type="ElvModel.Store.FireSensorEvents" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FireSensors">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="FireSensorEvents">
+        <PropertyRef Name="firesensor_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FireSensors_Terms">
+    <End Role="Terms" Type="ElvModel.Store.Terms" Multiplicity="0..1" />
+    <End Role="FireSensors" Type="ElvModel.Store.FireSensors" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Terms">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="FireSensors">
+        <PropertyRef Name="term_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FireSensorsState_FireSensors">
+    <End Role="FireSensors" Type="ElvModel.Store.FireSensors" Multiplicity="1" />
+    <End Role="FireSensorsState" Type="ElvModel.Store.FireSensorsState" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="FireSensors">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="FireSensorsState">
+        <PropertyRef Name="id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GasSensorEvents_GasSensors">
+    <End Role="GasSensors" Type="ElvModel.Store.GasSensors" Multiplicity="1" />
+    <End Role="GasSensorEvents" Type="ElvModel.Store.GasSensorEvents" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GasSensors">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="GasSensorEvents">
+        <PropertyRef Name="gassensor_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GasSensors_Terms">
+    <End Role="Terms" Type="ElvModel.Store.Terms" Multiplicity="1" />
+    <End Role="GasSensors" Type="ElvModel.Store.GasSensors" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Terms">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="GasSensors">
+        <PropertyRef Name="term_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GasSensorsState_GasSensors">
+    <End Role="GasSensors" Type="ElvModel.Store.GasSensors" Multiplicity="1" />
+    <End Role="GasSensorsState" Type="ElvModel.Store.GasSensorsState" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="GasSensors">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="GasSensorsState">
+        <PropertyRef Name="id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HoistEvents_Hoists">
+    <End Role="Hoists" Type="ElvModel.Store.Hoists" Multiplicity="1" />
+    <End Role="HoistEvents" Type="ElvModel.Store.HoistEvents" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Hoists">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="HoistEvents">
+        <PropertyRef Name="hoist_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Hoists_Terms">
+    <End Role="Terms" Type="ElvModel.Store.Terms" Multiplicity="0..1" />
+    <End Role="Hoists" Type="ElvModel.Store.Hoists" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Terms">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Hoists">
+        <PropertyRef Name="term_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HoistsState_Hoists">
+    <End Role="Hoists" Type="ElvModel.Store.Hoists" Multiplicity="1" />
+    <End Role="HoistsState" Type="ElvModel.Store.HoistsState" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Hoists">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="HoistsState">
+        <PropertyRef Name="id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ObjectEvents_Objects">
+    <End Role="Objects" Type="ElvModel.Store.Objects" Multiplicity="1" />
+    <End Role="ObjectEvents" Type="ElvModel.Store.ObjectEvents" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Objects">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="ObjectEvents">
+        <PropertyRef Name="object_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Objects_Terms">
+    <End Role="Terms" Type="ElvModel.Store.Terms" Multiplicity="0..1" />
+    <End Role="Objects" Type="ElvModel.Store.Objects" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Terms">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Objects">
+        <PropertyRef Name="term_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ObjectsState_Objects">
+    <End Role="Objects" Type="ElvModel.Store.Objects" Multiplicity="1" />
+    <End Role="ObjectsState" Type="ElvModel.Store.ObjectsState" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Objects">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="ObjectsState">
+        <PropertyRef Name="id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SpeakerPhoneChannelEvents_SpeakerPhoneChannels">
+    <End Role="SpeakerPhoneChannels" Type="ElvModel.Store.SpeakerPhoneChannels" Multiplicity="0..1" />
+    <End Role="SpeakerPhoneChannelEvents" Type="ElvModel.Store.SpeakerPhoneChannelEvents" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SpeakerPhoneChannels">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="SpeakerPhoneChannelEvents">
+        <PropertyRef Name="channel_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SpeakerPhoneChannels_Terms">
+    <End Role="Terms" Type="ElvModel.Store.Terms" Multiplicity="0..1" />
+    <End Role="SpeakerPhoneChannels" Type="ElvModel.Store.SpeakerPhoneChannels" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Terms">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="SpeakerPhoneChannels">
+        <PropertyRef Name="term_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SpeakerPhoneChannelsState_SpeakerPhoneChannels">
+    <End Role="SpeakerPhoneChannels" Type="ElvModel.Store.SpeakerPhoneChannels" Multiplicity="1" />
+    <End Role="SpeakerPhoneChannelsState" Type="ElvModel.Store.SpeakerPhoneChannelsState" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="SpeakerPhoneChannels">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="SpeakerPhoneChannelsState">
+        <PropertyRef Name="id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TeleControls_Terms">
+    <End Role="Terms" Type="ElvModel.Store.Terms" Multiplicity="0..1" />
+    <End Role="TeleControls" Type="ElvModel.Store.TeleControls" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Terms">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="TeleControls">
+        <PropertyRef Name="term_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TeleControlsState_TeleControls">
+    <End Role="TeleControls" Type="ElvModel.Store.TeleControls" Multiplicity="1" />
+    <End Role="TeleControlsState" Type="ElvModel.Store.TeleControlsState" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="TeleControls">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="TeleControlsState">
+        <PropertyRef Name="id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TermEvents_Terms">
+    <End Role="Terms" Type="ElvModel.Store.Terms" Multiplicity="0..1" />
+    <End Role="TermEvents" Type="ElvModel.Store.TermEvents" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Terms">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="TermEvents">
+        <PropertyRef Name="term_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TermsState_Terms">
+    <End Role="Terms" Type="ElvModel.Store.Terms" Multiplicity="1" />
+    <End Role="TermsState" Type="ElvModel.Store.TermsState" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Terms">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="TermsState">
+        <PropertyRef Name="id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_WaterSensorEvents_WaterSensors">
+    <End Role="WaterSensors" Type="ElvModel.Store.WaterSensors" Multiplicity="0..1" />
+    <End Role="WaterSensorEvents" Type="ElvModel.Store.WaterSensorEvents" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="WaterSensors">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="WaterSensorEvents">
+        <PropertyRef Name="watersensor_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_WaterSensors_Terms">
+    <End Role="Terms" Type="ElvModel.Store.Terms" Multiplicity="0..1" />
+    <End Role="WaterSensors" Type="ElvModel.Store.WaterSensors" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Terms">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="WaterSensors">
+        <PropertyRef Name="term_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_WaterSensorsState_WaterSensors">
+    <End Role="WaterSensors" Type="ElvModel.Store.WaterSensors" Multiplicity="1" />
+    <End Role="WaterSensorsState" Type="ElvModel.Store.WaterSensorsState" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="WaterSensors">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="WaterSensorsState">
+        <PropertyRef Name="id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

@@ -1,0 +1,29 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/MasterPages/DataPage.Master" AutoEventWireup="true" CodeBehind="CessationClaims.master.cs" 
+    Inherits="Horizont.Web.CessationClaimsMasterPage" %>
+<%@ Register src="~/WebControls/CessationClaim.ascx" tagname="CessationClaim" tagprefix="cs" %>
+
+<asp:Content ID="HeadContentId" ContentPlaceHolderID="HeadContent" runat="server">
+    <link href="/Styles/claim-controls.css" rel="stylesheet" type="text/css" />
+
+	<script src="/Scripts/claim-controls.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            initCessationClaimDlg();
+        });
+    </script>
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server"/>
+</asp:Content>
+
+<asp:Content ID="HeaderContentId" ContentPlaceHolderID="HeaderContent" runat="server">
+    <asp:ContentPlaceHolder ID="HeaderContent" runat="server"/>
+</asp:Content>
+
+<asp:Content ID="FilterContentId" ContentPlaceHolderID="FilterContent" runat="server">
+    <asp:ContentPlaceHolder ID="FilterContent" runat="server"/>
+</asp:Content>
+
+<asp:Content ID="ControlContentId" ContentPlaceHolderID="ControlContent" runat="server">
+    <div id="cessation_claim_dialog" class="hz-dialog">
+        <cs:CessationClaim id="CessationClaimCtrl" runat="server" />
+    </div>
+</asp:Content>

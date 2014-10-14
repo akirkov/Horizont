@@ -1,0 +1,111 @@
+﻿/* ------------------- SERVER CONTROL ------------------- */
+
+.server-row-wrap
+{
+	padding-bottom: 30px;
+	margin-right : 15px;
+}
+
+.server-field-label
+{
+	padding: 5px 15px 3px 0;
+	color: #555;
+	width: 150px;
+	text-align: right;
+	float: left;	
+}
+
+.server-field
+{
+	float: left;
+	width: 230px;
+}
+
+.server-field input
+{
+	width: 100%;
+	padding-left: 0.3em;
+}
+
+/* ------------------- CITY CONTROL ------------------- */
+
+.city-row-wrap
+{
+	padding-bottom: 30px;
+	margin-right : 15px;
+}
+
+.city-field-label
+{
+	padding: 5px 15px 3px 0;
+	color: #555;
+	width: 100px;
+	text-align: right;
+	float: left;	
+}
+
+.city-field
+{
+	float: left;
+	width: 200px;
+}
+
+.city-field input
+{
+	width: 100%;
+	padding-left: 0.3em;
+}
+
+/* ------------------- REGION CONTROL ------------------- */
+
+.region-row-wrap
+{
+	padding-bottom: 30px;
+	margin-right : 15px;
+}
+
+.region-field-label
+{
+	padding: 5px 15px 3px 0;
+	color: #555;
+	width: 100px;
+	text-align: right;
+	float: left;	
+}
+
+.region-field
+{
+	float: left;
+	width: 230px;
+}
+
+.region-field input
+{
+	width: 100%;
+	padding-left: 0.3em;
+}
+
+.region-field select
+{
+	width: 238px;
+	padding-left: 0.3em;
+}
+
+/* ----------------------- COMMON ----------------------- */
+
+.settings-validators
+{
+	margin-left:50px;
+	font-weight:bold;
+	color:Red;
+}
+
+
+.data-table-toolbar-button data-table-create-button
+{
+	border: 1px solid #cccccc;
+	background-color: #f6f6f6;
+	font-weight: bold;
+	color: #1c94c4;
+	cursor: pointer;
+}

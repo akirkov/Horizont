@@ -1,0 +1,202 @@
+﻿/* -------------------CUSTOMERS MAIN PAGE------------------- */
+
+.main-content
+{
+	min-height:538px;
+	padding-bottom:3px;
+	padding-top:3px;
+}
+
+.left-main-content
+{
+	width: 24.5%;
+	float:left;
+}
+
+.right-main-content
+{
+	width:75%;
+	float:right;
+}
+
+.claims-main-content
+{
+	width:66%;
+	float: left;
+}
+
+.elv-main-content
+{
+	width:33%;
+	float: right;
+}
+
+/* ----------------------------------------------------- */ 
+
+
+.regions-main-content p
+{
+	font-size: 1.5em;
+	font-weight: bold;
+	margin-left: 20px;
+}
+
+.regions-main-content div
+{
+	margin: 10px 0px 10px 30px;
+}
+
+.regions-main-content label
+{
+	width:50px;
+	height:20px;
+	margin-right:5px;
+}
+
+#cities_list, #regions_list, #disps_list
+{
+	width: 135px;
+}
+
+/* ----------------------------------------------------- */ 
+
+.main-border-style
+{
+	border: solid 1px #c0c0c0;
+    margin: 1px auto 1px auto;
+	padding: 5px 0px 5px 0px;
+	width: 98%;
+}
+
+.claims-border-style
+{
+	height: 50px;
+}
+
+.elv-border-style
+{
+	height: 46.6px;
+	cursor:pointer;
+}
+
+#common_claims_border, #lift_claims_border
+{
+	height: 98px;
+}
+
+/* ----------------------------------------------------- */ 
+
+.claims-button
+{
+	color: #0A3C91;
+	width:41%;
+	height: 45px;
+	margin: 2.5px 0% 2.5px 2%;
+	font-weight: bold;
+	float: left;
+	cursor: pointer;
+}
+
+.claims-border-style p
+{
+	width:41%;
+	height: 45px;
+	margin: 2.5px 0% 2.5px 2%;
+	font-weight: 700;
+	float: left;
+	text-align: center;
+}
+
+.claims-border-style input[type="text"]
+{
+	float: right;
+	width: 9%;
+	height: 40px;
+	margin: 2.5px 1.8% 2.5px 0.4%;
+	border: solid 1px #c0c0c0;
+	text-align: center;
+	font-size: 1.2em;
+	font-weight: bold;
+	color: Black;
+}
+
+/* ----------------------------------------------------- */ 
+
+.elv-objects-header 
+{
+	height: 25px;
+}
+
+.elv-objects-header p
+{
+	margin-top: 0px;
+	font-size: 1.2em;
+	font-weight: 700;
+	color:#0A3C91;
+	text-align: center;
+}
+
+.elv-objects-data
+{
+	width:auto;
+}
+
+.all-elv-objects-data 
+{
+	margin-left:3%;
+	float: left;
+}
+
+.break-elv-objects-data 
+{
+	margin-right:2%;
+	float: right;
+}
+
+.elv-objects-data p
+{
+	height: 20px;
+	float: left;
+	margin: 1px 2px 1px 0%;
+	padding-top: 2px;
+	padding-left:2px;
+	padding-right:1px;
+	font-weight: bold;
+	background-color: #BACBB6;
+	text-align:left;
+}
+
+.all-elv-objects-data p
+{
+	width:38px;
+}
+
+.break-elv-objects-data p
+{
+	width:82px;
+}
+
+.elv-objects-data input[type="text"]
+{
+	width:38px;
+	height: 18px;
+	text-align: center;
+	font-size: 1.2em;
+	color: Black;
+	float:right;
+	cursor:pointer;
+}
+
+.break-elv-objects-data input[type="text"]
+{
+	font-weight: bold;
+}
+
+@media only screen and (max-device-width: 800px) 
+{
+	.elv-objects-data input[type="text"]
+	{
+		width:29px !important;
+	}
+}
+

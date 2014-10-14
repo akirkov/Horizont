@@ -1,0 +1,417 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Horizont.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityType Name="Addresses">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="region_id" Type="int" Nullable="false" />
+          <Property Name="local_id" Type="int" Nullable="false" />
+          <Property Name="disp_id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="aspnet_Users">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="ApplicationId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="256" Nullable="false" />
+          <Property Name="LoweredUserName" Type="nvarchar" MaxLength="256" Nullable="false" />
+          <Property Name="MobileAlias" Type="nvarchar" MaxLength="16" />
+          <Property Name="IsAnonymous" Type="bit" Nullable="false" />
+          <Property Name="LastActivityDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Cities">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Regions">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="50" />
+          <Property Name="server_id" Type="int" Nullable="false" />
+          <Property Name="local_id" Type="int" Nullable="false" />
+          <Property Name="city_id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Rules">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="user_id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="city_id" Type="int" Nullable="false" />
+          <Property Name="region_id" Type="int" Nullable="false" />
+          <Property Name="disp_id" Type="int" Nullable="false" />
+          <Property Name="permission" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Servers">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="name" Type="nchar" MaxLength="50" />
+          <Property Name="claims_service" Type="nchar" MaxLength="255" Nullable="false" />
+          <Property Name="elv_service" Type="nchar" MaxLength="255" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_Addresses_Regions">
+          <End Role="Regions" Type="Self.Regions" Multiplicity="1" />
+          <End Role="Addresses" Type="Self.Addresses" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Regions">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Addresses">
+              <PropertyRef Name="region_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_aspnet_Users_aspnet_Users">
+          <End Role="aspnet_Users" Type="Self.aspnet_Users" Multiplicity="1" />
+          <End Role="aspnet_Users1" Type="Self.aspnet_Users" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="aspnet_Users">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="aspnet_Users1">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Regions_Cities">
+          <End Role="Cities" Type="Self.Cities" Multiplicity="1" />
+          <End Role="Regions" Type="Self.Regions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cities">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Regions">
+              <PropertyRef Name="city_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Regions_Servers">
+          <End Role="Servers" Type="Self.Servers" Multiplicity="1" />
+          <End Role="Regions" Type="Self.Regions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Servers">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Regions">
+              <PropertyRef Name="server_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Rules_aspnet_Users">
+          <End Role="aspnet_Users" Type="Self.aspnet_Users" Multiplicity="1" />
+          <End Role="Rules" Type="Self.Rules" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="aspnet_Users">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="Rules">
+              <PropertyRef Name="user_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="HorizontStoreContainer">
+          <EntitySet Name="Addresses" EntityType="Self.Addresses" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="aspnet_Users" EntityType="Self.aspnet_Users" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Cities" EntityType="Self.Cities" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Regions" EntityType="Self.Regions" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Rules" EntityType="Self.Rules" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Servers" EntityType="Self.Servers" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Addresses_Regions" Association="Self.FK_Addresses_Regions">
+            <End Role="Regions" EntitySet="Regions" />
+            <End Role="Addresses" EntitySet="Addresses" />
+          </AssociationSet>
+          <AssociationSet Name="FK_aspnet_Users_aspnet_Users" Association="Self.FK_aspnet_Users_aspnet_Users">
+            <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+            <End Role="aspnet_Users1" EntitySet="aspnet_Users" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Regions_Cities" Association="Self.FK_Regions_Cities">
+            <End Role="Cities" EntitySet="Cities" />
+            <End Role="Regions" EntitySet="Regions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Regions_Servers" Association="Self.FK_Regions_Servers">
+            <End Role="Servers" EntitySet="Servers" />
+            <End Role="Regions" EntitySet="Regions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Rules_aspnet_Users" Association="Self.FK_Rules_aspnet_Users">
+            <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+            <End Role="Rules" EntitySet="Rules" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="HorizontModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="HorizontEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Cities" EntityType="HorizontModel.City" />
+          <EntitySet Name="Regions" EntityType="HorizontModel.Region" />
+          <EntitySet Name="Servers" EntityType="HorizontModel.Server" />
+          <AssociationSet Name="FK_Regions_Cities" Association="HorizontModel.FK_Regions_Cities">
+            <End Role="Cities" EntitySet="Cities" />
+            <End Role="Regions" EntitySet="Regions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Regions_Servers" Association="HorizontModel.FK_Regions_Servers">
+            <End Role="Servers" EntitySet="Servers" />
+            <End Role="Regions" EntitySet="Regions" />
+          </AssociationSet>
+          <EntitySet Name="Users" EntityType="HorizontModel.User" />
+          <EntitySet Name="Rules" EntityType="HorizontModel.Rule" />
+          <AssociationSet Name="FK_Rules_aspnet_Users" Association="HorizontModel.FK_Rules_aspnet_Users">
+            <End Role="User" EntitySet="Users" />
+            <End Role="Rule" EntitySet="Rules" />
+          </AssociationSet>
+          <EntitySet Name="Addresses" EntityType="HorizontModel.Address" />
+          <AssociationSet Name="FK_Addresses_Regions" Association="HorizontModel.FK_Addresses_Regions">
+            <End Role="Region" EntitySet="Regions" />
+            <End Role="Address" EntitySet="Addresses" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="City">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Regions" Relationship="HorizontModel.FK_Regions_Cities" FromRole="Cities" ToRole="Regions" />
+        </EntityType>
+        <EntityType Name="Region">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ServerId" Type="Int32" Nullable="false" />
+          <Property Name="LocalId" Type="Int32" Nullable="false" />
+          <Property Name="CityId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="City" Relationship="HorizontModel.FK_Regions_Cities" FromRole="Regions" ToRole="Cities" />
+          <NavigationProperty Name="Server" Relationship="HorizontModel.FK_Regions_Servers" FromRole="Regions" ToRole="Servers" />
+          <NavigationProperty Name="Addresses" Relationship="HorizontModel.FK_Addresses_Regions" FromRole="Region" ToRole="Address" />
+        </EntityType>
+        <EntityType Name="Server">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="50" Unicode="true" FixedLength="true" />
+          <Property Name="ClaimsService" Type="String" Nullable="false" MaxLength="255" Unicode="true" FixedLength="true" />
+          <Property Name="ElvService" Type="String" Nullable="false" MaxLength="255" Unicode="true" FixedLength="true" />
+          <NavigationProperty Name="Regions" Relationship="HorizontModel.FK_Regions_Servers" FromRole="Servers" ToRole="Regions" />
+        </EntityType>
+        <Association Name="FK_Regions_Cities">
+          <End Role="Cities" Type="HorizontModel.City" Multiplicity="1" />
+          <End Role="Regions" Type="HorizontModel.Region" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cities">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Regions">
+              <PropertyRef Name="CityId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Regions_Servers">
+          <End Role="Servers" Type="HorizontModel.Server" Multiplicity="1" />
+          <End Role="Regions" Type="HorizontModel.Region" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Servers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Regions">
+              <PropertyRef Name="ServerId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Type="Guid" Name="ApplicationId" Nullable="false" />
+          <Property Type="Guid" Name="UserId" Nullable="false" />
+          <Property Type="String" Name="UserName" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LoweredUserName" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MobileAlias" MaxLength="16" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="IsAnonymous" Nullable="false" />
+          <Property Type="DateTime" Name="LastActivityDate" Nullable="false" Precision="3" />
+          <NavigationProperty Name="Rules" Relationship="HorizontModel.FK_Rules_aspnet_Users" FromRole="User" ToRole="Rule" />
+        </EntityType>
+        <EntityType Name="Rule">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" />
+          <Property Type="Guid" Name="UserId" Nullable="false" />
+          <Property Type="Int32" Name="CityId" Nullable="false" />
+          <Property Type="Int32" Name="RegionId" Nullable="false" />
+          <Property Type="Int32" Name="DispId" Nullable="false" />
+          <Property Type="Int32" Name="Permission" Nullable="false" />
+          <NavigationProperty Name="User" Relationship="HorizontModel.FK_Rules_aspnet_Users" FromRole="Rule" ToRole="User" />
+        </EntityType>
+        <Association Name="FK_Rules_aspnet_Users">
+          <End Type="HorizontModel.User" Role="User" Multiplicity="1" />
+          <End Type="HorizontModel.Rule" Role="Rule" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="Rule">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Address">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="RegionId" Nullable="false" />
+          <Property Type="Int32" Name="LocalId" Nullable="false" />
+          <Property Type="Int32" Name="DispId" Nullable="false" />
+          <NavigationProperty Name="Region" Relationship="HorizontModel.FK_Addresses_Regions" FromRole="Address" ToRole="Region" />
+        </EntityType>
+        <Association Name="FK_Addresses_Regions">
+          <End Type="HorizontModel.Region" Role="Region" Multiplicity="1" />
+          <End Type="HorizontModel.Address" Role="Address" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Region">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Address">
+              <PropertyRef Name="RegionId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="HorizontStoreContainer" CdmEntityContainer="HorizontEntities">
+          <EntitySetMapping Name="Cities">
+            <EntityTypeMapping TypeName="HorizontModel.City">
+              <MappingFragment StoreEntitySet="Cities">
+                <ScalarProperty Name="Id" ColumnName="id" />
+                <ScalarProperty Name="Name" ColumnName="name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Regions">
+            <EntityTypeMapping TypeName="HorizontModel.Region">
+              <MappingFragment StoreEntitySet="Regions">
+                <ScalarProperty Name="Id" ColumnName="id" />
+                <ScalarProperty Name="Name" ColumnName="name" />
+                <ScalarProperty Name="ServerId" ColumnName="server_id" />
+                <ScalarProperty Name="LocalId" ColumnName="local_id" />
+                <ScalarProperty Name="CityId" ColumnName="city_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Servers">
+            <EntityTypeMapping TypeName="HorizontModel.Server">
+              <MappingFragment StoreEntitySet="Servers">
+                <ScalarProperty Name="Id" ColumnName="id" />
+                <ScalarProperty Name="Name" ColumnName="name" />
+                <ScalarProperty Name="ClaimsService" ColumnName="claims_service" />
+                <ScalarProperty Name="ElvService" ColumnName="elv_service" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="HorizontModel.User">
+              <MappingFragment StoreEntitySet="aspnet_Users">
+                <ScalarProperty Name="LastActivityDate" ColumnName="LastActivityDate" />
+                <ScalarProperty Name="IsAnonymous" ColumnName="IsAnonymous" />
+                <ScalarProperty Name="MobileAlias" ColumnName="MobileAlias" />
+                <ScalarProperty Name="LoweredUserName" ColumnName="LoweredUserName" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Rules">
+            <EntityTypeMapping TypeName="HorizontModel.Rule">
+              <MappingFragment StoreEntitySet="Rules">
+                <ScalarProperty Name="Permission" ColumnName="permission" />
+                <ScalarProperty Name="DispId" ColumnName="disp_id" />
+                <ScalarProperty Name="RegionId" ColumnName="region_id" />
+                <ScalarProperty Name="CityId" ColumnName="city_id" />
+                <ScalarProperty Name="UserId" ColumnName="user_id" />
+                <ScalarProperty Name="Id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Addresses">
+            <EntityTypeMapping TypeName="HorizontModel.Address">
+              <MappingFragment StoreEntitySet="Addresses">
+                <ScalarProperty Name="DispId" ColumnName="disp_id" />
+                <ScalarProperty Name="LocalId" ColumnName="local_id" />
+                <ScalarProperty Name="RegionId" ColumnName="region_id" />
+                <ScalarProperty Name="Name" ColumnName="name" />
+                <ScalarProperty Name="Id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Default" />
+        <DesignerProperty Name="UseLegacyProvider" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="Horizont">
+        <EntityTypeShape EntityType="HorizontModel.City" Width="1.5" PointX="2.5" PointY="0.5" Height="1.5956835937500002" IsExpanded="true" />
+        <EntityTypeShape EntityType="HorizontModel.Region" Width="1.5" PointX="0.5" PointY="0.5" Height="2.3648893229166656" IsExpanded="true" />
+        <EntityTypeShape EntityType="HorizontModel.Server" Width="1.5" PointX="0.5" PointY="3.625" Height="1.9802864583333335" IsExpanded="true" />
+        <AssociationConnector Association="HorizontModel.FK_Regions_Cities" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.5" PointY="1.2978417968750002" />
+          <ConnectorPoint PointX="2" PointY="1.2978417968750002" />
+        </AssociationConnector>
+        <AssociationConnector Association="HorizontModel.FK_Regions_Servers" ManuallyRouted="false">
+          <ConnectorPoint PointX="1.25" PointY="3.625" />
+          <ConnectorPoint PointX="1.25" PointY="3.0571907552083331" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="HorizontModel.User" Width="1.5" PointX="7" PointY="0.5" Height="2.5571907552083331" />
+        <EntityTypeShape EntityType="HorizontModel.Rule" Width="1.5" PointX="4.75" PointY="0.5" Height="2.364889322916667" />
+        <AssociationConnector Association="HorizontModel.FK_Rules_aspnet_Users" >
+          <ConnectorPoint PointX="7" PointY="1.6824446614583333" />
+          <ConnectorPoint PointX="6.25" PointY="1.6824446614583333" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="HorizontModel.Address" Width="1.5" PointX="2.5" PointY="3.625" Height="2.1725878906249987" />
+        <AssociationConnector Association="HorizontModel.FK_Addresses_Regions" >
+          <ConnectorPoint PointX="1.9999999999999996" PointY="3.0571907552083331" />
+          <ConnectorPoint PointX="2.5" PointY="3.625" />
+        </AssociationConnector>
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,13 @@
+﻿Installing assembly 'D:\Source\Horizont\Horizont.Service\bin\Release\HorztSrvc.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\Source\Horizont\Horizont.Service\bin\Release\HorztSrvc.InstallLog
+   assemblypath = D:\Source\Horizont\Horizont.Service\bin\Release\HorztSrvc.exe
+Installing service Horizont.Service...
+Service Horizont.Service has been successfully installed.
+Creating EventLog source Horizont.Service in log Application...
+Committing assembly 'D:\Source\Horizont\Horizont.Service\bin\Release\HorztSrvc.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\Source\Horizont\Horizont.Service\bin\Release\HorztSrvc.InstallLog
+   assemblypath = D:\Source\Horizont\Horizont.Service\bin\Release\HorztSrvc.exe

@@ -1,0 +1,8 @@
+D:\Horizont\ClaimsClientLibrary\bin\Debug\ClaimsClientLibrary.dll
+D:\Horizont\ClaimsClientLibrary\bin\Debug\ClaimsClientLibrary.pdb
+D:\Horizont\ClaimsClientLibrary\obj\Debug\ClaimsClientLibrary.dll
+D:\Horizont\ClaimsClientLibrary\obj\Debug\ClaimsClientLibrary.pdb
+D:\Source\Horizont\ClaimsClientLibrary\bin\Debug\ClaimsClientLibrary.dll
+D:\Source\Horizont\ClaimsClientLibrary\bin\Debug\ClaimsClientLibrary.pdb
+D:\Source\Horizont\ClaimsClientLibrary\obj\Debug\ClaimsClientLibrary.dll
+D:\Source\Horizont\ClaimsClientLibrary\obj\Debug\ClaimsClientLibrary.pdb

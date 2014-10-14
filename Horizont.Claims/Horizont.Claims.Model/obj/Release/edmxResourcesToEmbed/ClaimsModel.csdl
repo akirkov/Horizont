@@ -1,0 +1,962 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ClaimsModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="ClaimsEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Addresses" EntityType="ClaimsModel.Address" />
+    <EntitySet Name="CessationApplicants" EntityType="ClaimsModel.CessationApplicant" />
+    <EntitySet Name="CessationBasises" EntityType="ClaimsModel.CessationBasis" />
+    <EntitySet Name="CessationClaims" EntityType="ClaimsModel.CessationClaim" />
+    <EntitySet Name="CessationClaimsHistory" EntityType="ClaimsModel.CessationClaimHistoryItem" />
+    <EntitySet Name="CessationReasons" EntityType="ClaimsModel.CessationReason" />
+    <EntitySet Name="CommonClaims" EntityType="ClaimsModel.CommonClaim" />
+    <EntitySet Name="CommonClaimsHistory" EntityType="ClaimsModel.CommonClaimHistoryItem" />
+    <EntitySet Name="CommonFailures" EntityType="ClaimsModel.CommonFailure" />
+    <EntitySet Name="DefaultSettingsObjects" EntityType="ClaimsModel.DefaultSettingsObject" />
+    <EntitySet Name="Disps" EntityType="ClaimsModel.Disp" />
+    <EntitySet Name="Executors" EntityType="ClaimsModel.Executor" />
+    <EntitySet Name="FailuresGroups" EntityType="ClaimsModel.FailuresGroup" />
+    <EntitySet Name="Infoes" EntityType="ClaimsModel.EmployeeInfo" />
+    <EntitySet Name="Journals" EntityType="ClaimsModel.Journal" />
+    <EntitySet Name="LiftClaims" EntityType="ClaimsModel.LiftClaim" />
+    <EntitySet Name="LiftClaimsHistory" EntityType="ClaimsModel.LiftClaimHistoryItem" />
+    <EntitySet Name="LiftFailures" EntityType="ClaimsModel.LiftFailure" />
+    <EntitySet Name="Organizations" EntityType="ClaimsModel.Organization" />
+    <EntitySet Name="TypeWorks" EntityType="ClaimsModel.TypeWork" />
+    <AssociationSet Name="FK_Claims_Addresses" Association="ClaimsModel.FK_Claims_Addresses">
+      <End Role="Addresses" EntitySet="Addresses" />
+      <End Role="Claims" EntitySet="CommonClaims" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CommonClaimsHistory_Addresses" Association="ClaimsModel.FK_CommonClaimsHistory_Addresses">
+      <End Role="Addresses" EntitySet="Addresses" />
+      <End Role="CommonClaimsHistory" EntitySet="CommonClaimsHistory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LiftClaims_Addresses" Association="ClaimsModel.FK_LiftClaims_Addresses">
+      <End Role="Addresses" EntitySet="Addresses" />
+      <End Role="LiftClaims" EntitySet="LiftClaims" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LiftClaimsHistory_Addresses" Association="ClaimsModel.FK_LiftClaimsHistory_Addresses">
+      <End Role="Addresses" EntitySet="Addresses" />
+      <End Role="LiftClaimsHistory" EntitySet="LiftClaimsHistory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CessationClaims_Disps" Association="ClaimsModel.FK_CessationClaims_Disps">
+      <End Role="Disps" EntitySet="Disps" />
+      <End Role="CessationClaims" EntitySet="CessationClaims" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CessationClaimsHistory_CessationClaims" Association="ClaimsModel.FK_CessationClaimsHistory_CessationClaims">
+      <End Role="CessationClaims" EntitySet="CessationClaims" />
+      <End Role="CessationClaimsHistory" EntitySet="CessationClaimsHistory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CessationClaimsHistory_Disps" Association="ClaimsModel.FK_CessationClaimsHistory_Disps">
+      <End Role="Disps" EntitySet="Disps" />
+      <End Role="CessationClaimsHistory" EntitySet="CessationClaimsHistory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Claims_CommonFailures" Association="ClaimsModel.FK_Claims_CommonFailures">
+      <End Role="CommonFailures" EntitySet="CommonFailures" />
+      <End Role="Claims" EntitySet="CommonClaims" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Claims_Disps" Association="ClaimsModel.FK_Claims_Disps">
+      <End Role="Disps" EntitySet="Disps" />
+      <End Role="Claims" EntitySet="CommonClaims" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Claims_Journals" Association="ClaimsModel.FK_Claims_Journals">
+      <End Role="Journals" EntitySet="Journals" />
+      <End Role="Claims" EntitySet="CommonClaims" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CommonClaimsHistory_Claims" Association="ClaimsModel.FK_CommonClaimsHistory_Claims">
+      <End Role="Claims" EntitySet="CommonClaims" />
+      <End Role="CommonClaimsHistory" EntitySet="CommonClaimsHistory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CommonClaimsHistory_CommonFailures" Association="ClaimsModel.FK_CommonClaimsHistory_CommonFailures">
+      <End Role="CommonFailures" EntitySet="CommonFailures" />
+      <End Role="CommonClaimsHistory" EntitySet="CommonClaimsHistory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CommonClaimsHistory_Disps" Association="ClaimsModel.FK_CommonClaimsHistory_Disps">
+      <End Role="Disps" EntitySet="Disps" />
+      <End Role="CommonClaimsHistory" EntitySet="CommonClaimsHistory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CommonClaimsHistory_Journals" Association="ClaimsModel.FK_CommonClaimsHistory_Journals">
+      <End Role="Journals" EntitySet="Journals" />
+      <End Role="CommonClaimsHistory" EntitySet="CommonClaimsHistory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CommonFailures_Journals" Association="ClaimsModel.FK_CommonFailures_Journals">
+      <End Role="Journals" EntitySet="Journals" />
+      <End Role="CommonFailures" EntitySet="CommonFailures" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Executors_Disps" Association="ClaimsModel.FK_Executors_Disps">
+      <End Role="Disps" EntitySet="Disps" />
+      <End Role="Executors" EntitySet="Executors" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LiftClaims_Disps" Association="ClaimsModel.FK_LiftClaims_Disps">
+      <End Role="Disps" EntitySet="Disps" />
+      <End Role="LiftClaims" EntitySet="LiftClaims" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LiftClaimsHistory_Disps" Association="ClaimsModel.FK_LiftClaimsHistory_Disps">
+      <End Role="Disps" EntitySet="Disps" />
+      <End Role="LiftClaimsHistory" EntitySet="LiftClaimsHistory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Executors_Journals" Association="ClaimsModel.FK_Executors_Journals">
+      <End Role="Journals" EntitySet="Journals" />
+      <End Role="Executors" EntitySet="Executors" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FailuresGroups_Journals" Association="ClaimsModel.FK_FailuresGroups_Journals">
+      <End Role="Journals" EntitySet="Journals" />
+      <End Role="FailuresGroups" EntitySet="FailuresGroups" />
+    </AssociationSet>
+    <AssociationSet Name="DispAddress" Association="ClaimsModel.DispAddress">
+      <End Role="Disp" EntitySet="Disps" />
+      <End Role="Address" EntitySet="Addresses" />
+    </AssociationSet>
+    <AssociationSet Name="DispJournal" Association="ClaimsModel.DispJournal">
+      <End Role="Disp" EntitySet="Disps" />
+      <End Role="Journal" EntitySet="Journals" />
+    </AssociationSet>
+    <AssociationSet Name="CessationClaimAddress" Association="ClaimsModel.CessationClaimAddress">
+      <End Role="CessationClaim" EntitySet="CessationClaims" />
+      <End Role="Address" EntitySet="Addresses" />
+    </AssociationSet>
+    <AssociationSet Name="FailuresGroupCommonFailure" Association="ClaimsModel.FailuresGroupCommonFailure">
+      <End Role="FailuresGroup" EntitySet="FailuresGroups" />
+      <End Role="CommonFailure" EntitySet="CommonFailures" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LiftClaimsHistory_LiftClaimsHistory" Association="ClaimsModel.FK_LiftClaimsHistory_LiftClaimsHistory">
+      <End Role="LiftClaim" EntitySet="LiftClaims" />
+      <End Role="LiftClaimsHistory" EntitySet="LiftClaimsHistory" />
+    </AssociationSet>
+    <EntitySet Name="Flats" EntityType="ClaimsModel.Flat" />
+    <AssociationSet Name="FK_FlatHousingStock_Addresses" Association="ClaimsModel.FK_FlatHousingStock_Addresses">
+      <End Role="Address" EntitySet="Addresses" />
+      <End Role="FlatHousingStock" EntitySet="Flats" />
+    </AssociationSet>
+    <EntitySet Name="Changes" EntityType="ClaimsModel.Change" />
+    <EntitySet Name="TablesChanges" EntityType="ClaimsModel.TablesChange" />
+    <EntitySet Name="Regions" EntityType="ClaimsModel.Region" />
+    <AssociationSet Name="FK_Disps_Regions" Association="ClaimsModel.FK_Disps_Regions">
+      <End Role="Region" EntitySet="Regions" />
+      <End Role="Disp" EntitySet="Disps" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Addresses_Regions" Association="ClaimsModel.FK_Addresses_Regions">
+      <End Role="Region" EntitySet="Regions" />
+      <End Role="Address" EntitySet="Addresses" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Info_Regions" Association="ClaimsModel.FK_Info_Regions">
+      <End Role="Region" EntitySet="Regions" />
+      <End Role="EmployeeInfo" EntitySet="Infoes" />
+    </AssociationSet>
+    <EntitySet Name="Address2Journals" EntityType="ClaimsModel.Address2Journals" />
+    <AssociationSet Name="FK_Address2Journals_Addresses" Association="ClaimsModel.FK_Address2Journals_Addresses">
+      <End Role="Address" EntitySet="Addresses" />
+      <End Role="Address2Journals" EntitySet="Address2Journals" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Address2Journals_Disps" Association="ClaimsModel.FK_Address2Journals_Disps">
+      <End Role="Disp" EntitySet="Disps" />
+      <End Role="Address2Journals" EntitySet="Address2Journals" />
+    </AssociationSet>
+    <EntitySet Name="DataBaseSettings" EntityType="ClaimsModel.DataBaseSetting" />
+  </EntityContainer>
+  <EntityType Name="Address">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Abonent" Type="String" MaxLength="50" Unicode="false" FixedLength="true" />
+    <Property Name="HouseId" Type="Int32" />
+    <NavigationProperty Name="CommonClaims" Relationship="ClaimsModel.FK_Claims_Addresses" FromRole="Addresses" ToRole="Claims" />
+    <NavigationProperty Name="CommonClaimsHistories" Relationship="ClaimsModel.FK_CommonClaimsHistory_Addresses" FromRole="Addresses" ToRole="CommonClaimsHistory" />
+    <NavigationProperty Name="LiftClaims" Relationship="ClaimsModel.FK_LiftClaims_Addresses" FromRole="Addresses" ToRole="LiftClaims" />
+    <NavigationProperty Name="LiftClaimsHistories" Relationship="ClaimsModel.FK_LiftClaimsHistory_Addresses" FromRole="Addresses" ToRole="LiftClaimsHistory" />
+    <NavigationProperty Name="Disps" Relationship="ClaimsModel.DispAddress" FromRole="Address" ToRole="Disp" />
+    <NavigationProperty Name="CessationClaims" Relationship="ClaimsModel.CessationClaimAddress" FromRole="Address" ToRole="CessationClaim" />
+    <Property Type="String" Name="AddressStr" MaxLength="255" FixedLength="true" Unicode="false" />
+    <Property Name="RecordInfo" Type="ClaimsModel.RecordInfoType" Nullable="false" />
+    <NavigationProperty Name="FlatHousingStocks" Relationship="ClaimsModel.FK_FlatHousingStock_Addresses" FromRole="Address" ToRole="FlatHousingStock" />
+    <Property Type="Int32" Name="RegionId" />
+    <NavigationProperty Name="Region" Relationship="ClaimsModel.FK_Addresses_Regions" FromRole="Address" ToRole="Region" />
+    <NavigationProperty Name="Address2Journals" Relationship="ClaimsModel.FK_Address2Journals_Addresses" FromRole="Address" ToRole="Address2Journals" />
+  </EntityType>
+  <EntityType Name="CessationApplicant">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="255" Unicode="false" FixedLength="true" />
+    <Property Name="RecordInfo" Type="ClaimsModel.RecordInfoType" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CessationBasis">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="255" Unicode="false" FixedLength="true" />
+    <Property Name="RecordInfo" Type="ClaimsModel.RecordInfoType" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CessationClaim">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="AddressStr" Type="String" MaxLength="255" Unicode="false" FixedLength="true" />
+    <Property Name="Abonent" Type="String" MaxLength="50" Unicode="false" FixedLength="true" />
+    <Property Name="CessationObject" Type="Int32" />
+    <Property Name="Reason" Type="String" MaxLength="255" Unicode="false" FixedLength="true" />
+    <Property Name="ObjectType" Type="Int32" />
+    <Property Name="ObjectsCount" Type="Int32" />
+    <Property Name="FlatsCount" Type="Int32" />
+    <Property Name="Applicant" Type="String" MaxLength="255" Unicode="false" FixedLength="true" />
+    <Property Name="Basis" Type="String" MaxLength="255" Unicode="false" FixedLength="true" />
+    <Property Name="BasisComment" Type="String" MaxLength="255" Unicode="false" FixedLength="true" />
+    <Property Name="OrgName" Type="String" MaxLength="255" Unicode="false" FixedLength="true" />
+    <Property Name="Comment" Type="String" MaxLength="255" Unicode="false" FixedLength="true" />
+    <Property Name="ReceivedOperator" Type="String" MaxLength="50" Unicode="false" FixedLength="true" />
+    <Property Name="ReceivedTime" Type="DateTime" />
+    <Property Name="IsLegate" Type="Boolean" Nullable="false" />
+    <Property Name="ExecutedOperator" Type="String" MaxLength="50" Unicode="false" FixedLength="true" />
+    <Property Name="ExecutedTime" Type="DateTime" />
+    <Property Name="DispId" Type="Int32" />
+    <Property Name="RegNumber" Type="String" MaxLength="50" Unicode="false" FixedLength="true" />
+    <NavigationProperty Name="Disp" Relationship="ClaimsModel.FK_CessationClaims_Disps" FromRole="CessationClaims" ToRole="Disps" />
+    <NavigationProperty Name="Addresses" Relationship="ClaimsModel.CessationClaimAddress" FromRole="CessationClaim" ToRole="Address" />
+    <Property Name="RecordInfo" Type="ClaimsModel.RecordInfoType" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CessationClaimHistoryItem">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="ClaimId" Type="Int32" />
+    <Property Name="AddressStr" Type="String" MaxLength="255" Unicode="false" FixedLength="true" />
+    <Property Name="Abonent" Type="String" MaxLength="50" Unicode="false" FixedLength="true" />
+    <Property Name="CessationObject" Type="Int32" />
+    <Property Name="Reason" Type="String" MaxLength="255" Unicode="false" FixedLength="true" />
+    <Property Name="ObjectType" Type="Int32" />
+    <Property Name="ObjectsCount" Type="Int32" />
+    <Property Name="FlatsCount" Type="Int32" />
+    <Property Name="Applicant" Type="String" MaxLength="255" Unicode="false" FixedLength="true" />
+    <Property Name="Basis" Type="String" MaxLength="255" Unicode="false" FixedLength="true" />
+    <Property Name="BasisComment" Type="String" MaxLength="255" Unicode="false" FixedLength="true" />
+    <Property Name="OrgName" Type="String" MaxLength="255" Unicode="false" FixedLength="true" />
+    <Property Name="Comment" Type="String" MaxLength="255" Unicode="false" FixedLength="true" />
+    <Property Name="ReceivedOperator" Type="String" MaxLength="50" Unicode="false" FixedLength="true" />
+    <Property Name="ReceivedTime" Type="DateTime" />
+    <Property Name="IsLegate" Type="Boolean" />
+    <Property Name="ExecutedOperator" Type="String" MaxLength="50" Unicode="false" FixedLength="true" />
+    <Property Name="ExecutedTime" Type="DateTime" />
+    <Property Name="DispId" Type="Int32" />
+    <Property Name="RegNumber" Type="String" MaxLength="50" Unicode="false" FixedLength="true" />
+    <Property Name="ChangeTime" Type="DateTime" />
+    <Property Name="ChangeOperator" Type="String" MaxLength="50" Unicode="false" FixedLength="true" />
+    <Property Name="ChangeId" Type="Int32" />
+    <NavigationProperty Name="CessationClaim" Relationship="ClaimsModel.FK_CessationClaimsHistory_CessationClaims" FromRole="CessationClaimsHistory" ToRole="CessationClaims" />
+    <NavigationProperty Name="Disp" Relationship="ClaimsModel.FK_CessationClaimsHistory_Disps" FromRole="CessationClaimsHistory" ToRole="Disps" />
+  </EntityType>
+  <EntityType Name="CessationReason">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="255" Unicode="false" FixedLength="true" />
+    <Property Name="RecordInfo" Type="ClaimsModel.RecordInfoType" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CommonClaim">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="JournalId" Type="Int32" />
+    <Property Name="AddressId" Type="Int32" />
+    <Property Name="Flat" Type="Int32" />
+    <Property Name="Doorway" Type="Int32" />
+    <Property Name="Floor" Type="Int32" />
+    <Property Name="Phone" Type="String" MaxLength="50" Unicode="false" FixedLength="true" />
+    <Property Name="Code" Type="String" MaxLength="50" Unicode="false" FixedLength="true" />
+    <Property Name="CommonFailureStr" Type="String" MaxLength="255" Unicode="false" FixedLength="true" />
+    <Property Name="ExecutedPeriod" Type="Int32" />
+    <Property Name="CommonFailureComment" Type="String" MaxLength="1000" Unicode="true" FixedLength="false" />
+    <Property Name="ReceivedOperator" Type="String" MaxLength="50" Unicode="false" FixedLength="true" />
+    <Property Name="ReceivedTime" Type="DateTime" />
+    <Property Name="OrgName" Type="String" MaxLength="255" Unicode="false" FixedLength="true" />
+    <Property Name="IsTeam" Type="Int32" />
+    <Property Name="IsSubmission" Type="Boolean" Nullable="false" />
+    <Property Name="SubmissionTime" Type="DateTime" />
+    <Property Name="IsLegate" Type="Boolean" Nullable="false" />
+    <Property Name="Result" Type="Int32" />
+    <Property Name="Typework" Type="String" MaxLength="255" Unicode="false" FixedLength="true" />
+    <Property Name="Executor" Type="String" MaxLength="50" Unicode="false" FixedLength="true" />
+    <Property Name="IsCheck" Type="Boolean" Nullable="false" />
+    <Property Name="ExecutedOperator" Type="String" MaxLength="50" Unicode="false" FixedLength="true" />
+    <Property Name="ExecutedTime" Type="DateTime" />
+    <Property Name="DispId" Type="Int32" />
+    <Property Name="RegNumber" Type="String" MaxLength="50" Unicode="false" FixedLength="true" />
+    <Property Name="CommonFailureId" Type="Int32" />
+    <Property Name="SubmissionOperator" Type="String" MaxLength="50" Unicode="false" FixedLength="true" />
+    <Property Name="Owner" Type="String" MaxLength="255" Unicode="false" FixedLength="true" />
+    <NavigationProperty Name="Address" Relationship="ClaimsModel.FK_Claims_Addresses" FromRole="Claims" ToRole="Addresses" />
+    <NavigationProperty Name="CommonFailure" Relationship="ClaimsModel.FK_Claims_CommonFailures" FromRole="Claims" ToRole="CommonFailures" />
+    <NavigationProperty Name="Disp" Relationship="ClaimsModel.FK_Claims_Disps" FromRole="Claims" ToRole="Disps" />
+    <NavigationProperty Name="Journal" Relationship="ClaimsModel.FK_Claims_Journals" FromRole="Claims" ToRole="Journals" />
+    <Property Name="RecordInfo" Type="ClaimsModel.RecordInfoType" Nullable="false" />
+    <Property Type="Int32" Name="Status" />
+    <Property Type="DateTime" Name="SentTime" />
+    <Property Type="DateTime" Name="DeliveredTime" />
+    <Property Type="String" Name="DeliveredOperator" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="CommonClaimHistoryItem">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="ClaimId" Type="Int32" />
+    <Property Name="JournalId" Type="Int32" />
+    <Property Name="AddressId" Type="Int32" />
+    <Property Name="Flat" Type="Int32" />
+    <Property Name="Doorway" Type="Int32" />
+    <Property Name="Floor" Type="Int32" />
+    <Property Name="Phone" Type="String" MaxLength="50" Unicode="false" FixedLength="true" />
+    <Property Name="Code" Type="String" MaxLength="50" Unicode="false" FixedLength="true" />
+    <Property Name="CommonFailureStr" Type="String" MaxLength="255" Unicode="false" FixedLength="true" />
+    <Property Name="ExecutedPeriod" Type="Int32" />
+    <Property Name="CommonFailureComment" Type="String" MaxLength="1000" Unicode="true" FixedLength="false" />
+    <Property Name="ReceivedOperator" Type="String" MaxLength="50" Unicode="false" FixedLength="true" />
+    <Property Name="ReceivedTime" Type="DateTime" />
+    <Property Name="OrgName" Type="String" MaxLength="255" Unicode="false" FixedLength="true" />
+    <Property Name="IsTeam" Type="Int32" />
+    <Property Name="IsSubmission" Type="Boolean" />
+    <Property Name="SubmissionTime" Type="DateTime" />
+    <Property Name="IsLegate" Type="Boolean" />
+    <Property Name="Result" Type="Int32" />
+    <Property Name="Typework" Type="String" MaxLength="255" Unicode="false" FixedLength="true" />
+    <Property Name="Executor" Type="String" MaxLength="50" Unicode="false" FixedLength="true" />
+    <Property Name="IsCheck" Type="Boolean" />
+    <Property Name="ExecutedOperator" Type="String" MaxLength="50" Unicode="false" FixedLength="true" />
+    <Property Name="ExecutedTime" Type="DateTime" />
+    <Property Name="DispId" Type="Int32" />
+    <Property Name="RegNumber" Type="String" MaxLength="50" Unicode="false" FixedLength="true" />
+    <Property Name="CommonFailureId" Type="Int32" />
+    <Property Name="SubmissionOperator" Type="String" MaxLength="50" Unicode="false" FixedLength="true" />
+    <Property Name="Owner" Type="String" MaxLength="255" Unicode="false" FixedLength="true" />
+    <Property Name="ChangeTime" Type="DateTime" />
+    <Property Name="ChangeOperator" Type="String" MaxLength="50" Unicode="false" FixedLength="true" />
+    <Property Name="ChangeId" Type="Int32" />
+    <NavigationProperty Name="Address" Relationship="ClaimsModel.FK_CommonClaimsHistory_Addresses" FromRole="CommonClaimsHistory" ToRole="Addresses" />
+    <NavigationProperty Name="CommonClaim" Relationship="ClaimsModel.FK_CommonClaimsHistory_Claims" FromRole="CommonClaimsHistory" ToRole="Claims" />
+    <NavigationProperty Name="CommonFailure" Relationship="ClaimsModel.FK_CommonClaimsHistory_CommonFailures" FromRole="CommonClaimsHistory" ToRole="CommonFailures" />
+    <NavigationProperty Name="Disp" Relationship="ClaimsModel.FK_CommonClaimsHistory_Disps" FromRole="CommonClaimsHistory" ToRole="Disps" />
+    <NavigationProperty Name="Journal" Relationship="ClaimsModel.FK_CommonClaimsHistory_Journals" FromRole="CommonClaimsHistory" ToRole="Journals" />
+  </EntityType>
+  <EntityType Name="CommonFailure">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="255" Unicode="false" FixedLength="true" />
+    <Property Name="ExecutedPeriod" Type="Int32" />
+    <Property Name="JournalId" Type="Int32" />
+    <Property Name="Spec" Type="Int32" />
+    <NavigationProperty Name="CommonClaims" Relationship="ClaimsModel.FK_Claims_CommonFailures" FromRole="CommonFailures" ToRole="Claims" />
+    <NavigationProperty Name="Journal" Relationship="ClaimsModel.FK_CommonFailures_Journals" FromRole="CommonFailures" ToRole="Journals" />
+    <NavigationProperty Name="FailuresGroup" Relationship="ClaimsModel.FailuresGroupCommonFailure" FromRole="CommonFailure" ToRole="FailuresGroup" />
+    <Property Name="RecordInfo" Type="ClaimsModel.RecordInfoType" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DefaultSettingsObject">
+    <Key>
+      <PropertyRef Name="TableName" />
+    </Key>
+    <Property Name="TableName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="true" />
+    <Property Name="ObjectName" Type="String" MaxLength="255" Unicode="false" FixedLength="true" />
+  </EntityType>
+  <EntityType Name="Disp">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="50" Unicode="false" FixedLength="true" />
+    <Property Name="DispGuid" Type="String" MaxLength="255" Unicode="false" FixedLength="true" />
+    <NavigationProperty Name="CessationClaims" Relationship="ClaimsModel.FK_CessationClaims_Disps" FromRole="Disps" ToRole="CessationClaims" />
+    <NavigationProperty Name="CommonClaims" Relationship="ClaimsModel.FK_Claims_Disps" FromRole="Disps" ToRole="Claims" />
+    <NavigationProperty Name="Executors" Relationship="ClaimsModel.FK_Executors_Disps" FromRole="Disps" ToRole="Executors" />
+    <NavigationProperty Name="LiftClaims" Relationship="ClaimsModel.FK_LiftClaims_Disps" FromRole="Disps" ToRole="LiftClaims" />
+    <NavigationProperty Name="Addresses" Relationship="ClaimsModel.DispAddress" FromRole="Disp" ToRole="Address" />
+    <NavigationProperty Name="Journals" Relationship="ClaimsModel.DispJournal" FromRole="Disp" ToRole="Journal" />
+    <Property Name="RecordInfo" Type="ClaimsModel.RecordInfoType" Nullable="false" />
+    <Property Type="Int32" Name="RegionId" />
+    <NavigationProperty Name="Region" Relationship="ClaimsModel.FK_Disps_Regions" FromRole="Disp" ToRole="Region" />
+    <NavigationProperty Name="Address2Journals" Relationship="ClaimsModel.FK_Address2Journals_Disps" FromRole="Disp" ToRole="Address2Journals" />
+    <Property Type="String" Name="Address" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Phone" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Executor">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="200" Unicode="false" FixedLength="true" />
+    <Property Name="Post" Type="String" MaxLength="200" Unicode="false" FixedLength="true" />
+    <Property Name="OrgName" Type="String" MaxLength="255" Unicode="false" FixedLength="true" />
+    <Property Name="JournalId" Type="Int32" />
+    <Property Name="DispId" Type="Int32" />
+    <NavigationProperty Name="Disp" Relationship="ClaimsModel.FK_Executors_Disps" FromRole="Executors" ToRole="Disps" />
+    <NavigationProperty Name="Journal" Relationship="ClaimsModel.FK_Executors_Journals" FromRole="Executors" ToRole="Journals" />
+    <Property Name="RecordInfo" Type="ClaimsModel.RecordInfoType" Nullable="false" />
+  </EntityType>
+  <EntityType Name="FailuresGroup">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="255" Unicode="false" FixedLength="true" />
+    <Property Name="JournalId" Type="Int32" />
+    <NavigationProperty Name="Journal" Relationship="ClaimsModel.FK_FailuresGroups_Journals" FromRole="FailuresGroups" ToRole="Journals" />
+    <NavigationProperty Name="CommonFailures" Relationship="ClaimsModel.FailuresGroupCommonFailure" FromRole="FailuresGroup" ToRole="CommonFailure" />
+    <Property Name="RecordInfo" Type="ClaimsModel.RecordInfoType" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EmployeeInfo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="50" Unicode="false" FixedLength="true" />
+    <Property Name="Post" Type="String" MaxLength="50" Unicode="false" FixedLength="true" />
+    <Property Name="Phone" Type="String" MaxLength="50" Unicode="false" FixedLength="true" />
+    <Property Name="Address" Type="String" MaxLength="50" Unicode="false" FixedLength="true" />
+    <Property Name="RecordInfo" Type="ClaimsModel.RecordInfoType" Nullable="false" />
+    <Property Type="Int32" Name="DispId" />
+    <Property Type="Int32" Name="RegionId" />
+    <NavigationProperty Name="Region" Relationship="ClaimsModel.FK_Info_Regions" FromRole="EmployeeInfo" ToRole="Region" />
+  </EntityType>
+  <EntityType Name="Journal">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="50" Unicode="false" FixedLength="true" />
+    <NavigationProperty Name="CommonClaims" Relationship="ClaimsModel.FK_Claims_Journals" FromRole="Journals" ToRole="Claims" />
+    <NavigationProperty Name="CommonClaimsHistories" Relationship="ClaimsModel.FK_CommonClaimsHistory_Journals" FromRole="Journals" ToRole="CommonClaimsHistory" />
+    <NavigationProperty Name="CommonFailures" Relationship="ClaimsModel.FK_CommonFailures_Journals" FromRole="Journals" ToRole="CommonFailures" />
+    <NavigationProperty Name="Executors" Relationship="ClaimsModel.FK_Executors_Journals" FromRole="Journals" ToRole="Executors" />
+    <NavigationProperty Name="FailuresGroups" Relationship="ClaimsModel.FK_FailuresGroups_Journals" FromRole="Journals" ToRole="FailuresGroups" />
+    <NavigationProperty Name="Disps" Relationship="ClaimsModel.DispJournal" FromRole="Journal" ToRole="Disp" />
+    <Property Name="RecordInfo" Type="ClaimsModel.RecordInfoType" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LiftClaim">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="AddressId" Type="Int32" />
+    <Property Name="Doorway" Type="Int32" />
+    <Property Name="LiftType" Type="Int32" />
+    <Property Name="Code" Type="String" MaxLength="50" Unicode="false" FixedLength="true" />
+    <Property Name="LiftFailureStr" Type="String" MaxLength="255" Unicode="false" FixedLength="true" />
+    <Property Name="Floor" Type="Int32" />
+    <Property Name="IsJam" Type="Boolean" Nullable="false" />
+    <Property Name="IsStay" Type="Boolean" Nullable="false" />
+    <Property Name="ReceivedOperator" Type="String" MaxLength="50" Unicode="false" FixedLength="true" />
+    <Property Name="ReceivedTime" Type="DateTime" />
+    <Property Name="IsLegate" Type="Boolean" Nullable="false" />
+    <Property Name="Result" Type="Int32" />
+    <Property Name="ExecutedTime" Type="DateTime" />
+    <Property Name="Reason" Type="String" MaxLength="255" Unicode="false" FixedLength="true" />
+    <Property Name="Typework" Type="String" MaxLength="255" Unicode="false" FixedLength="true" />
+    <Property Name="Executor" Type="String" MaxLength="50" Unicode="false" FixedLength="true" />
+    <Property Name="IsCheck" Type="Boolean" Nullable="false" />
+    <Property Name="ExecutedOperator" Type="String" MaxLength="50" Unicode="false" FixedLength="true" />
+    <Property Name="DispId" Type="Int32" />
+    <Property Name="RegNumber" Type="String" MaxLength="50" Unicode="false" FixedLength="true" />
+    <Property Name="IsSubmission" Type="Boolean" />
+    <Property Name="OrgName" Type="String" MaxLength="255" Unicode="false" FixedLength="true" />
+    <Property Name="SubmissionOperator" Type="String" MaxLength="50" Unicode="false" FixedLength="true" />
+    <Property Name="SubmissionTime" Type="DateTime" />
+    <Property Name="OtisId" Type="Int32" />
+    <Property Name="StatusId" Type="Int32" />
+    <Property Name="ChangeId" Type="Int32" />
+    <Property Name="LiftFailureComment" Type="String" MaxLength="1000" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="Address" Relationship="ClaimsModel.FK_LiftClaims_Addresses" FromRole="LiftClaims" ToRole="Addresses" />
+    <NavigationProperty Name="Disp" Relationship="ClaimsModel.FK_LiftClaims_Disps" FromRole="LiftClaims" ToRole="Disps" />
+    <Property Name="RecordInfo" Type="ClaimsModel.RecordInfoType" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LiftClaimHistoryItem">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="ClaimId" Type="Int32" />
+    <Property Name="AddressId" Type="Int32" />
+    <Property Name="Doorway" Type="Int32" />
+    <Property Name="LiftType" Type="Int32" />
+    <Property Name="Code" Type="String" MaxLength="50" Unicode="false" FixedLength="true" />
+    <Property Name="LiftFailureStr" Type="String" MaxLength="255" Unicode="false" FixedLength="true" />
+    <Property Name="Floor" Type="Int32" />
+    <Property Name="IsJam" Type="Boolean" />
+    <Property Name="IsStay" Type="Boolean" />
+    <Property Name="ReceivedOperator" Type="String" MaxLength="50" Unicode="false" FixedLength="true" />
+    <Property Name="ReceivedTime" Type="DateTime" />
+    <Property Name="IsLegate" Type="Boolean" />
+    <Property Name="Result" Type="Int32" />
+    <Property Name="ExecutedTime" Type="DateTime" />
+    <Property Name="Reason" Type="String" MaxLength="255" Unicode="false" FixedLength="true" />
+    <Property Name="Typework" Type="String" MaxLength="255" Unicode="false" FixedLength="true" />
+    <Property Name="Executor" Type="String" MaxLength="50" Unicode="false" FixedLength="true" />
+    <Property Name="IsCheck" Type="Boolean" />
+    <Property Name="ExecutedOperator" Type="String" MaxLength="50" Unicode="false" FixedLength="true" />
+    <Property Name="DispId" Type="Int32" />
+    <Property Name="RegNumber" Type="String" MaxLength="50" Unicode="false" FixedLength="true" />
+    <Property Name="IsSubmission" Type="Boolean" />
+    <Property Name="OrgName" Type="String" MaxLength="255" Unicode="false" FixedLength="true" />
+    <Property Name="SubmissionOperator" Type="String" MaxLength="50" Unicode="false" FixedLength="true" />
+    <Property Name="SubmissionTime" Type="DateTime" />
+    <Property Name="LiftFailureComment" Type="String" MaxLength="1000" Unicode="true" FixedLength="false" />
+    <Property Name="ChangeTime" Type="DateTime" />
+    <Property Name="ChangeOperator" Type="String" MaxLength="50" Unicode="false" FixedLength="true" />
+    <Property Name="ChangeId" Type="Int32" />
+    <NavigationProperty Name="Address" Relationship="ClaimsModel.FK_LiftClaimsHistory_Addresses" FromRole="LiftClaimsHistory" ToRole="Addresses" />
+    <NavigationProperty Name="Disp" Relationship="ClaimsModel.FK_LiftClaimsHistory_Disps" FromRole="LiftClaimsHistory" ToRole="Disps" />
+    <NavigationProperty Name="LiftClaims" Relationship="ClaimsModel.FK_LiftClaimsHistory_LiftClaimsHistory" FromRole="LiftClaimsHistory" ToRole="LiftClaim" />
+  </EntityType>
+  <EntityType Name="LiftFailure">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="255" Unicode="false" FixedLength="true" />
+    <Property Name="IsJam" Type="Boolean" Nullable="false" />
+    <Property Name="IsStay" Type="Boolean" Nullable="false" />
+    <Property Name="RecordInfo" Type="ClaimsModel.RecordInfoType" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Organization">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="50" Unicode="false" FixedLength="true" />
+    <Property Name="OrgGuid" Type="String" MaxLength="255" Unicode="false" FixedLength="true" />
+    <Property Name="RecordInfo" Type="ClaimsModel.RecordInfoType" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TypeWork">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="JournalId" Type="Int32" />
+    <Property Name="FailureId" Type="Int32" />
+    <Property Name="Name" Type="String" MaxLength="255" Unicode="false" FixedLength="true" />
+    <Property Name="RecordInfo" Type="ClaimsModel.RecordInfoType" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Claims_Addresses">
+    <End Role="Addresses" Type="ClaimsModel.Address" Multiplicity="0..1" />
+    <End Role="Claims" Type="ClaimsModel.CommonClaim" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Addresses">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Claims">
+        <PropertyRef Name="AddressId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CommonClaimsHistory_Addresses">
+    <End Role="Addresses" Type="ClaimsModel.Address" Multiplicity="0..1" />
+    <End Role="CommonClaimsHistory" Type="ClaimsModel.CommonClaimHistoryItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Addresses">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CommonClaimsHistory">
+        <PropertyRef Name="AddressId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LiftClaims_Addresses">
+    <End Role="Addresses" Type="ClaimsModel.Address" Multiplicity="0..1" />
+    <End Role="LiftClaims" Type="ClaimsModel.LiftClaim" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Addresses">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="LiftClaims">
+        <PropertyRef Name="AddressId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LiftClaimsHistory_Addresses">
+    <End Role="Addresses" Type="ClaimsModel.Address" Multiplicity="0..1" />
+    <End Role="LiftClaimsHistory" Type="ClaimsModel.LiftClaimHistoryItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Addresses">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="LiftClaimsHistory">
+        <PropertyRef Name="AddressId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CessationClaims_Disps">
+    <End Role="Disps" Type="ClaimsModel.Disp" Multiplicity="0..1" />
+    <End Role="CessationClaims" Type="ClaimsModel.CessationClaim" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Disps">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CessationClaims">
+        <PropertyRef Name="DispId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CessationClaimsHistory_CessationClaims">
+    <End Role="CessationClaims" Type="ClaimsModel.CessationClaim" Multiplicity="0..1" />
+    <End Role="CessationClaimsHistory" Type="ClaimsModel.CessationClaimHistoryItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CessationClaims">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CessationClaimsHistory">
+        <PropertyRef Name="ClaimId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CessationClaimsHistory_Disps">
+    <End Role="Disps" Type="ClaimsModel.Disp" Multiplicity="0..1" />
+    <End Role="CessationClaimsHistory" Type="ClaimsModel.CessationClaimHistoryItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Disps">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CessationClaimsHistory">
+        <PropertyRef Name="DispId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Claims_CommonFailures">
+    <End Role="CommonFailures" Type="ClaimsModel.CommonFailure" Multiplicity="0..1" />
+    <End Role="Claims" Type="ClaimsModel.CommonClaim" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CommonFailures">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Claims">
+        <PropertyRef Name="CommonFailureId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Claims_Disps">
+    <End Role="Disps" Type="ClaimsModel.Disp" Multiplicity="0..1" />
+    <End Role="Claims" Type="ClaimsModel.CommonClaim" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Disps">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Claims">
+        <PropertyRef Name="DispId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Claims_Journals">
+    <End Role="Journals" Type="ClaimsModel.Journal" Multiplicity="0..1" />
+    <End Role="Claims" Type="ClaimsModel.CommonClaim" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Journals">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Claims">
+        <PropertyRef Name="JournalId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CommonClaimsHistory_Claims">
+    <End Role="Claims" Type="ClaimsModel.CommonClaim" Multiplicity="0..1" />
+    <End Role="CommonClaimsHistory" Type="ClaimsModel.CommonClaimHistoryItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Claims">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CommonClaimsHistory">
+        <PropertyRef Name="ClaimId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CommonClaimsHistory_CommonFailures">
+    <End Role="CommonFailures" Type="ClaimsModel.CommonFailure" Multiplicity="0..1" />
+    <End Role="CommonClaimsHistory" Type="ClaimsModel.CommonClaimHistoryItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CommonFailures">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CommonClaimsHistory">
+        <PropertyRef Name="CommonFailureId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CommonClaimsHistory_Disps">
+    <End Role="Disps" Type="ClaimsModel.Disp" Multiplicity="0..1" />
+    <End Role="CommonClaimsHistory" Type="ClaimsModel.CommonClaimHistoryItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Disps">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CommonClaimsHistory">
+        <PropertyRef Name="DispId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CommonClaimsHistory_Journals">
+    <End Role="Journals" Type="ClaimsModel.Journal" Multiplicity="0..1" />
+    <End Role="CommonClaimsHistory" Type="ClaimsModel.CommonClaimHistoryItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Journals">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CommonClaimsHistory">
+        <PropertyRef Name="JournalId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CommonFailures_Journals">
+    <End Role="Journals" Type="ClaimsModel.Journal" Multiplicity="0..1" />
+    <End Role="CommonFailures" Type="ClaimsModel.CommonFailure" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Journals">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CommonFailures">
+        <PropertyRef Name="JournalId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Executors_Disps">
+    <End Role="Disps" Type="ClaimsModel.Disp" Multiplicity="0..1" />
+    <End Role="Executors" Type="ClaimsModel.Executor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Disps">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Executors">
+        <PropertyRef Name="DispId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LiftClaims_Disps">
+    <End Role="Disps" Type="ClaimsModel.Disp" Multiplicity="0..1" />
+    <End Role="LiftClaims" Type="ClaimsModel.LiftClaim" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Disps">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="LiftClaims">
+        <PropertyRef Name="DispId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LiftClaimsHistory_Disps">
+    <End Role="Disps" Type="ClaimsModel.Disp" Multiplicity="0..1" />
+    <End Role="LiftClaimsHistory" Type="ClaimsModel.LiftClaimHistoryItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Disps">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="LiftClaimsHistory">
+        <PropertyRef Name="DispId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Executors_Journals">
+    <End Role="Journals" Type="ClaimsModel.Journal" Multiplicity="0..1" />
+    <End Role="Executors" Type="ClaimsModel.Executor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Journals">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Executors">
+        <PropertyRef Name="JournalId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FailuresGroups_Journals">
+    <End Role="Journals" Type="ClaimsModel.Journal" Multiplicity="0..1" />
+    <End Role="FailuresGroups" Type="ClaimsModel.FailuresGroup" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Journals">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="FailuresGroups">
+        <PropertyRef Name="JournalId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DispAddress">
+    <End Type="ClaimsModel.Disp" Role="Disp" Multiplicity="*" />
+    <End Type="ClaimsModel.Address" Role="Address" Multiplicity="*" />
+  </Association>
+  <Association Name="DispJournal">
+    <End Type="ClaimsModel.Disp" Role="Disp" Multiplicity="*" />
+    <End Type="ClaimsModel.Journal" Role="Journal" Multiplicity="*" />
+  </Association>
+  <Association Name="CessationClaimAddress">
+    <End Type="ClaimsModel.CessationClaim" Role="CessationClaim" Multiplicity="*" />
+    <End Type="ClaimsModel.Address" Role="Address" Multiplicity="*" />
+  </Association>
+  <Association Name="FailuresGroupCommonFailure">
+    <End Type="ClaimsModel.FailuresGroup" Role="FailuresGroup" Multiplicity="*" />
+    <End Type="ClaimsModel.CommonFailure" Role="CommonFailure" Multiplicity="*" />
+  </Association>
+  <Association Name="FK_LiftClaimsHistory_LiftClaimsHistory">
+    <End Type="ClaimsModel.LiftClaim" Role="LiftClaim" Multiplicity="0..1" />
+    <End Type="ClaimsModel.LiftClaimHistoryItem" Role="LiftClaimsHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LiftClaim">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="LiftClaimsHistory">
+        <PropertyRef Name="ClaimId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <ComplexType Name="RecordInfoType">
+    <Property Type="DateTime" Name="CreateTime" />
+    <Property Type="DateTime" Name="ChangeTime" />
+    <Property Type="DateTime" Name="DeleteTime" />
+    <Property Type="DateTime" Name="RecordTime" />
+    <Property Type="String" Name="CreateOperator" MaxLength="50" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="ChangeOperator" MaxLength="50" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="DeleteOperator" MaxLength="50" FixedLength="true" Unicode="false" />
+    <Property Type="Boolean" Name="IsDeleted" />
+  </ComplexType>
+  <EntityType Name="Flat">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="Int32" Name="AddressId" />
+    <Property Type="Int32" Name="Number" />
+    <Property Type="Int32" Name="Doorway" />
+    <Property Type="Int32" Name="Floor" />
+    <Property Type="String" Name="Phone" MaxLength="50" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="Code" MaxLength="50" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="OtherPhones" MaxLength="50" FixedLength="true" Unicode="false" />
+    <Property Type="Int32" Name="Square" />
+    <Property Type="Int32" Name="RoomsCount" />
+    <Property Type="String" Name="Owner" MaxLength="50" FixedLength="true" Unicode="false" />
+    <Property Type="Int32" Name="UpFlat" />
+    <Property Type="Int32" Name="DownFlat" />
+    <NavigationProperty Name="Address" Relationship="ClaimsModel.FK_FlatHousingStock_Addresses" FromRole="FlatHousingStock" ToRole="Address" />
+    <Property Name="RecordInfo" Type="ClaimsModel.RecordInfoType" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_FlatHousingStock_Addresses">
+    <End Type="ClaimsModel.Address" Role="Address" Multiplicity="0..1" />
+    <End Type="ClaimsModel.Flat" Role="FlatHousingStock" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Address">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="FlatHousingStock">
+        <PropertyRef Name="AddressId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Change">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="SettingsId" Nullable="false" />
+    <Property Type="Int32" Name="ClaimsId" Nullable="false" />
+    <Property Type="Int32" Name="Id" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TablesChange">
+    <Key>
+      <PropertyRef Name="TableName" />
+    </Key>
+    <Property Type="String" Name="TableName" Nullable="false" MaxLength="50" FixedLength="true" Unicode="false" />
+    <Property Type="DateTime" Name="ChangeTime" />
+  </EntityType>
+  <EntityType Name="Region">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="String" Name="Name" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Chief" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="RegionGuid" MaxLength="255" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Disps" Relationship="ClaimsModel.FK_Disps_Regions" FromRole="Region" ToRole="Disp" />
+    <Property Name="RecordInfo" Type="ClaimsModel.RecordInfoType" Nullable="false" />
+    <NavigationProperty Name="Addresses" Relationship="ClaimsModel.FK_Addresses_Regions" FromRole="Region" ToRole="Address" />
+    <NavigationProperty Name="Infoes" Relationship="ClaimsModel.FK_Info_Regions" FromRole="Region" ToRole="EmployeeInfo" />
+  </EntityType>
+  <Association Name="FK_Disps_Regions">
+    <End Type="ClaimsModel.Region" Role="Region" Multiplicity="0..1" />
+    <End Type="ClaimsModel.Disp" Role="Disp" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Region">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Disp">
+        <PropertyRef Name="RegionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Addresses_Regions">
+    <End Type="ClaimsModel.Region" Role="Region" Multiplicity="0..1" />
+    <End Type="ClaimsModel.Address" Role="Address" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Region">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Address">
+        <PropertyRef Name="RegionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Info_Regions">
+    <End Type="ClaimsModel.Region" Role="Region" Multiplicity="0..1" />
+    <End Type="ClaimsModel.EmployeeInfo" Role="EmployeeInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Region">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="EmployeeInfo">
+        <PropertyRef Name="RegionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Address2Journals">
+    <Key>
+      <PropertyRef Name="DispId" />
+      <PropertyRef Name="AddressId" />
+    </Key>
+    <Property Type="Int32" Name="DispId" Nullable="false" />
+    <Property Type="Int32" Name="AddressId" Nullable="false" />
+    <Property Type="Int32" Name="JournalId" />
+    <Property Type="Boolean" Name="IsInclude" />
+    <NavigationProperty Name="Address" Relationship="ClaimsModel.FK_Address2Journals_Addresses" FromRole="Address2Journals" ToRole="Address" />
+    <NavigationProperty Name="Disp" Relationship="ClaimsModel.FK_Address2Journals_Disps" FromRole="Address2Journals" ToRole="Disp" />
+  </EntityType>
+  <Association Name="FK_Address2Journals_Addresses">
+    <End Type="ClaimsModel.Address" Role="Address" Multiplicity="1" />
+    <End Type="ClaimsModel.Address2Journals" Role="Address2Journals" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Address">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Address2Journals">
+        <PropertyRef Name="AddressId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Address2Journals_Disps">
+    <End Type="ClaimsModel.Disp" Role="Disp" Multiplicity="1" />
+    <End Type="ClaimsModel.Address2Journals" Role="Address2Journals" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Disp">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Address2Journals">
+        <PropertyRef Name="DispId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="DataBaseSetting">
+    <Key>
+      <PropertyRef Name="IsSync" />
+    </Key>
+    <Property Type="Boolean" Name="IsSync" Nullable="false" />
+    <Property Type="Int32" Name="DeleteAfterDays" />
+    <Property Type="DateTime" Name="LastSyncTime" />
+    <Property Type="Int32" Name="HistoryDaysCount" />
+    <Property Type="Boolean" Name="IsHistoryEnabled" />
+  </EntityType>
+</Schema>

@@ -1,0 +1,4 @@
+D:\Source\Horizont\Horizont.Claims\Horizont.Claims.Library\bin\Debug\Horizont.Claims.Library.dll
+D:\Source\Horizont\Horizont.Claims\Horizont.Claims.Library\bin\Debug\Horizont.Claims.Library.pdb
+D:\Source\Horizont\Horizont.Claims\Horizont.Claims.Library\obj\Debug\Horizont.Claims.Library.dll
+D:\Source\Horizont\Horizont.Claims\Horizont.Claims.Library\obj\Debug\Horizont.Claims.Library.pdb

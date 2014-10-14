@@ -1,0 +1,8 @@
+D:\Source\Horizont\Horizont.Elv\Horizont.Elv.Model\bin\Debug\Horizont.Elv.Model.dll.config
+D:\Source\Horizont\Horizont.Elv\Horizont.Elv.Model\bin\Debug\Horizont.Elv.Model.dll
+D:\Source\Horizont\Horizont.Elv\Horizont.Elv.Model\bin\Debug\Horizont.Elv.Model.pdb
+D:\Source\Horizont\Horizont.Elv\Horizont.Elv.Model\bin\Debug\Horizont.Elv.Library.dll
+D:\Source\Horizont\Horizont.Elv\Horizont.Elv.Model\bin\Debug\Horizont.Elv.Library.pdb
+D:\Source\Horizont\Horizont.Elv\Horizont.Elv.Model\obj\Debug\Horizont.Elv.Model.csprojResolveAssemblyReference.cache
+D:\Source\Horizont\Horizont.Elv\Horizont.Elv.Model\obj\Debug\Horizont.Elv.Model.dll
+D:\Source\Horizont\Horizont.Elv\Horizont.Elv.Model\obj\Debug\Horizont.Elv.Model.pdb

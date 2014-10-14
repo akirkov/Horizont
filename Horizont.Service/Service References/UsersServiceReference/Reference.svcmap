@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="09b87407-4e3f-4cb9-80d1-9810140a23a2" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="https://horzt.ru/WebServices/UsersService.svc?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="UsersService.xsd" MetadataType="Schema" ID="3280d0df-bacd-49b2-a072-444470b35ee5" SourceId="1" SourceUrl="https://horzt.ru/WebServices/UsersService.svc?xsd=xsd1" />
+    <MetadataFile FileName="UsersService.wsdl" MetadataType="Wsdl" ID="5195a677-e3fa-4671-a79e-440d1d67fd31" SourceId="1" SourceUrl="https://horzt.ru/WebServices/UsersService.svc?wsdl" />
+    <MetadataFile FileName="UsersService1.wsdl" MetadataType="Wsdl" ID="3ccef04a-af10-48a1-bec4-d77d6656a943" SourceId="1" SourceUrl="https://horzt.ru/WebServices/UsersService.svc?wsdl=wsdl1" />
+    <MetadataFile FileName="UsersService2.wsdl" MetadataType="Wsdl" ID="7675a0cd-452c-4194-8823-b9ab81690a72" SourceId="1" SourceUrl="https://horzt.ru/WebServices/UsersService.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="UsersService4.xsd" MetadataType="Schema" ID="439d5d6e-4770-4f44-bdc5-4b216792639c" SourceId="1" SourceUrl="https://horzt.ru/WebServices/UsersService.svc?xsd=xsd4" />
+    <MetadataFile FileName="UsersService1.xsd" MetadataType="Schema" ID="39f840b3-86d0-473e-a1ff-20343c11234d" SourceId="1" SourceUrl="https://horzt.ru/WebServices/UsersService.svc?xsd=xsd2" />
+    <MetadataFile FileName="UsersService2.xsd" MetadataType="Schema" ID="225da2b2-5216-4d9c-aee9-6a6772cc6878" SourceId="1" SourceUrl="https://horzt.ru/WebServices/UsersService.svc?xsd=xsd3" />
+    <MetadataFile FileName="UsersService3.xsd" MetadataType="Schema" ID="e800e830-f0dc-4d73-b46f-14297f080bd9" SourceId="1" SourceUrl="https://horzt.ru/WebServices/UsersService.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
