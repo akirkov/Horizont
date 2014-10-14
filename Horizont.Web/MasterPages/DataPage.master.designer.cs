@@ -10,7 +10,7 @@
 namespace Horizont.Web {
     
     
-    public partial class DataPageMasterPage {
+    public partial class DataMasterPage {
         
         /// <summary>
         /// HeadContent control.

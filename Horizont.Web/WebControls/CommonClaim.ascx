@@ -1,5 +1,5 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="CommonClaim.ascx.cs" 
-    Inherits="Horizont.WebClaim" %>
+    Inherits="Horizont.Web.CommonClaim" %>
 <div id="common_claim_control">
     <div class="cc-header">
         <label class="cc-regnumber-label">№</label>

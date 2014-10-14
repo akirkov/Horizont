@@ -1,5 +1,5 @@
 ﻿<%@ Master Language="C#" MasterPageFile="~/MasterPages/Site.Master" AutoEventWireup="true" CodeBehind="DataPage.master.cs" 
-    Inherits="Horizont.Web.DataPageMasterPage" %>
+    Inherits="Horizont.Web.DataMasterPage" %>
 
 <asp:Content ID="HeadContentId" ContentPlaceHolderID="HeadContent" runat="server">
         <link href="/jquery-plugins/DataTables-1.9.4/css/jquery.dataTables.jui.css" rel="stylesheet" type="text/css" />

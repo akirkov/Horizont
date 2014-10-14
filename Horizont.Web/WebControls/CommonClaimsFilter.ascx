@@ -1,5 +1,5 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="CommonClaimsFilter.ascx.cs" 
-    Inherits="Horizont.WebClaimsFilter" %>
+    Inherits="Horizont.Web.CommonClaimsFilter" %>
 <div id="common_claims_filter_control" >
     <div class="fc-header">
     </div>
