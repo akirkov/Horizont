@@ -1,4 +1,0 @@
-D:\Source\Horizont\Horizont.Elv\Horizont.Elv.Library\bin\Debug\Horizont.Elv.Library.dll
-D:\Source\Horizont\Horizont.Elv\Horizont.Elv.Library\bin\Debug\Horizont.Elv.Library.pdb
-D:\Source\Horizont\Horizont.Elv\Horizont.Elv.Library\obj\Debug\Horizont.Elv.Library.dll
-D:\Source\Horizont\Horizont.Elv\Horizont.Elv.Library\obj\Debug\Horizont.Elv.Library.pdb

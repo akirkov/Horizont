@@ -1,5 +1,0 @@
-D:\Source\Horizont\Horizont.Model\bin\Debug\Horizont.Model.dll.config
-D:\Source\Horizont\Horizont.Model\bin\Debug\Horizont.Model.dll
-D:\Source\Horizont\Horizont.Model\bin\Debug\Horizont.Model.pdb
-D:\Source\Horizont\Horizont.Model\obj\Debug\Horizont.Model.dll
-D:\Source\Horizont\Horizont.Model\obj\Debug\Horizont.Model.pdb

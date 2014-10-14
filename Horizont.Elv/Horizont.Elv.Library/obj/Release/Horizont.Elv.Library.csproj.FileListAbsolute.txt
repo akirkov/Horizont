@@ -1,5 +1,0 @@
-D:\Source\Horizont\Horizont.Elv\Horizont.Elv.Library\bin\Release\Horizont.Elv.Library.dll
-D:\Source\Horizont\Horizont.Elv\Horizont.Elv.Library\bin\Release\Horizont.Elv.Library.pdb
-D:\Source\Horizont\Horizont.Elv\Horizont.Elv.Library\obj\Release\Horizont.Elv.Library.dll
-D:\Source\Horizont\Horizont.Elv\Horizont.Elv.Library\obj\Release\Horizont.Elv.Library.pdb
-D:\Source\Horizont\Horizont.Elv\Horizont.Elv.Library\obj\Release\Horizont.Elv.Library.csprojResolveAssemblyReference.cache
