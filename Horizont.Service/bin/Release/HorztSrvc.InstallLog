@@ -11,3 +11,24 @@ Affected parameters are:
    logtoconsole = 
    logfile = D:\Source\Horizont\Horizont.Service\bin\Release\HorztSrvc.InstallLog
    assemblypath = D:\Source\Horizont\Horizont.Service\bin\Release\HorztSrvc.exe
+Uninstalling assembly 'D:\Source\Horizont\Horizont.Service\bin\Release\HorztSrvc.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\Source\Horizont\Horizont.Service\bin\Release\HorztSrvc.InstallLog
+   assemblypath = D:\Source\Horizont\Horizont.Service\bin\Release\HorztSrvc.exe
+Removing EventLog source Horizont.Service.
+Service Horizont.Service is being removed from the system...
+Service Horizont.Service was successfully removed from the system.
+Installing assembly 'D:\Source\Horizont\Horizont.Service\bin\Release\HorztSrvc.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\Source\Horizont\Horizont.Service\bin\Release\HorztSrvc.InstallLog
+   assemblypath = D:\Source\Horizont\Horizont.Service\bin\Release\HorztSrvc.exe
+Installing service HorizontService...
+Service HorizontService has been successfully installed.
+Creating EventLog source HorizontService in log Application...
+Committing assembly 'D:\Source\Horizont\Horizont.Service\bin\Release\HorztSrvc.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\Source\Horizont\Horizont.Service\bin\Release\HorztSrvc.InstallLog
+   assemblypath = D:\Source\Horizont\Horizont.Service\bin\Release\HorztSrvc.exe

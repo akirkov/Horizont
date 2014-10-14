@@ -2,3 +2,4 @@ D:\Source\Horizont\Horizont.Claims\Horizont.Claims.Library\bin\Release\Horizont.
 D:\Source\Horizont\Horizont.Claims\Horizont.Claims.Library\bin\Release\Horizont.Claims.Library.pdb
 D:\Source\Horizont\Horizont.Claims\Horizont.Claims.Library\obj\Release\Horizont.Claims.Library.dll
 D:\Source\Horizont\Horizont.Claims\Horizont.Claims.Library\obj\Release\Horizont.Claims.Library.pdb
+D:\Source\Horizont\Horizont.Claims\Horizont.Claims.Library\obj\Release\Horizont.Claims.Library.csprojResolveAssemblyReference.cache

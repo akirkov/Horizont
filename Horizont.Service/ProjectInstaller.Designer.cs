@@ -40,8 +40,8 @@
             // serviceInstaller
             // 
             this.serviceInstaller.Description = "Horizont Service";
-            this.serviceInstaller.DisplayName = "Horizont.Service";
-            this.serviceInstaller.ServiceName = "Horizont.Service";
+            this.serviceInstaller.DisplayName = "HorizontService";
+            this.serviceInstaller.ServiceName = "HorizontService";
             this.serviceInstaller.StartType = System.ServiceProcess.ServiceStartMode.Automatic;
             // 
             // ProjectInstaller
