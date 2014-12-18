@@ -1,4 +1,4 @@
-﻿namespace Horizont.Web.WebControls
+﻿namespace Horizont.Web
 {
     using System;
 
